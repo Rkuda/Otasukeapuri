@@ -9,21 +9,21 @@ import SwiftUI
 
 struct Shisou2: View {
     @Environment(\.dismiss) private var dm
-    
+
     var body: some View {
         ZStack {
             Color(.white)
                 .edgesIgnoringSafeArea(.all)
-            
+
             VStack{
-                
+
                 HStack{
                     Button {
                         dm()
                     } label: {
                         Image(systemName: "multiply.circle.fill")
                             .foregroundColor(.black)
-                        
+
                     }
                     Button {
                         dm()
@@ -33,11 +33,9 @@ struct Shisou2: View {
                             .frame(maxWidth: .infinity,alignment: .leading)
                             .foregroundColor(.black)
                     }
-                    
-                    
                 }
-                
                 .padding()
+
                 Spacer()
             }
         }

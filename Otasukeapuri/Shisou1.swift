@@ -8,74 +8,68 @@
 import SwiftUI
 
 struct Shisou1: View {
-    
+
     @Environment(\.dismiss) private var dm
-    
+
     var body: some View {
-        
-            ZStack {
-                Color(.white)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack{
-                    
-                    HStack{
-                        Button {
-                            dm()
-                        } label: {
-                            Image(systemName: "multiply.circle.fill")
-                                .foregroundColor(.black)
-                            
-                        }
-                        Button {
-                            dm()
-                        } label: {
-                            Text("閉じる")
-                                .font(.caption)
-                                .frame(maxWidth: .infinity,alignment: .leading)
-                                .foregroundColor(.black)
-                        }
-                        
-                        
+
+        ZStack {
+            Color(.white)
+                .edgesIgnoringSafeArea(.all)
+
+            VStack{
+
+                HStack{
+                    Button {
+                        dm()
+                    } label: {
+                        Image(systemName: "multiply.circle.fill")
+                            .foregroundColor(.black)
+
                     }
-                    
-                    .padding()
-                   
-                    Text("オズボーンのチェックリスト")
-                        .font(.title2)
-                        .fontWeight(.black)
-                    Spacer()
-                    
-                    ScrollView{
-                        
+                    Button {
+                        dm()
+                    } label: {
+                        Text("閉じる")
+                            .font(.caption)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .foregroundColor(.black)
+                    }
+                }
+
+                .padding()
+
+                Text("オズボーンのチェックリスト")
+                    .font(.title2)
+                    .fontWeight(.black)
+                Spacer()
+
+                ScrollView{
+
                     ZStack{  //文字の周り余白のため
-                        
-                        
-                        
+
                         VStack{
-                            
+
                             Text("アメリカの実業家であるアレックス・F・オズボーン氏が考案した思考法です。\n全部で9つの項目があり、アイデアのテーマ・対象を決めたうえで、チェックリストの各項目当てはめてアイデアを出していきます。9項目の内訳は、以下のとおりです。\n")
                             Text("転用")
                                 .foregroundColor(.orange).fontWeight(.bold)
                                 .frame(maxWidth:.infinity, alignment:.leading)
                             Text("（例：他に使い道はないか？他に活躍できる分野・領域はないか？）\n")
                                 .frame(maxWidth:.infinity, alignment:.leading)
-                            
-                               
-                               
+
                             Text("応用")
                                 .foregroundColor(.orange).fontWeight(.bold)
                                 .frame(maxWidth:.infinity, alignment:.leading)
                             Text("（例：他の業種・分野からアイデアを借りると？）\n")
                                 .frame(maxWidth:.infinity, alignment:.leading)
-                            
+
                             Text("変更")
-                            
+
                                 .foregroundColor(.orange).fontWeight(.bold)
                                 .frame(maxWidth:.infinity, alignment:.leading)
                             Text("（例：形・機能を変えてみたら？）\n")
                                 .frame(maxWidth:.infinity, alignment:.leading)
-                            
+
                             Text("拡大")
                                 .foregroundColor(.orange).fontWeight(.bold)
                                 .frame(maxWidth:.infinity, alignment:.leading)
@@ -107,20 +101,10 @@ struct Shisou1: View {
                                 .frame(maxWidth:.infinity, alignment:.leading)
                             Text("\n上記の9項目の視点をもとに、仮説を立てていきます。")
                                 .frame(maxWidth:.infinity, alignment:.leading)
-                          
                         }
-                        
-                        
                     }   //文字の周り余白のため
-                    
                     .padding(.all, 30)
-                    
-                    
-                    
-                    
                 }
-                
-                
             }
         }
     }

@@ -2,7 +2,7 @@ import SwiftUI
 import SwiftData
 
 struct Output: View {
-    
+
     init() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithOpaqueBackground()
@@ -13,57 +13,46 @@ struct Output: View {
         UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
     }
-    
+
     @Environment(\.dismiss) var dismiss
-    
+
     // 保存のやつ
     @Environment(\.modelContext) private var context
     @Query private var todos: [Todo]
-    
+
     @State private var textFieldInput = ""
     // 保存のやつ
-    
-  
-    
+
     var body: some View {
         NavigationStack{
-            
-            
+
             ZStack{
                 Color(red: 0.4, green: 0.7, blue: 0.7)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
                     .toolbarBackground(.blue, for: .navigationBar)
-            
+
                 VStack{
-                    
-                    
+
                     Spacer()
-                    
-                    
+
                     NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("新規メモ")) {
                         Image("Group 10")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 200)
                             .padding(.top,50)
-                        
-                        }
-                    
+
+                    }
+
                     .padding()
                     Text("新規メモを作ろう!")
-                    
-                    
-                 Spacer()
-                       
-                 Spacer()
-                    
+
+                    Spacer()
+
+                    Spacer()
+
                 }
-                
-                
-                
-                
-                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -73,13 +62,7 @@ struct Output: View {
                         }
                 }
             }
-            
         }
-        
-        
-        
-        
-        
     }
     private func add(todo: String) {
         let data = Todo(content: todo)

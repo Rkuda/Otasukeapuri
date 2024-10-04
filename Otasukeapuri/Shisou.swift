@@ -13,21 +13,18 @@ struct Shisou: View {
     @State var modalFlg1 = false
     @State var modalFlg2 = false
     @State var modalFlg3 = false
-    
+
     var body: some View {
-        
+
         NavigationStack{
             ZStack{
                 Color(red: 0.9, green: 0.6, blue: 0.1)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
                     .toolbarBackground(.white, for: .navigationBar)
-                
-                
-                
-                
+
                 VStack(spacing: 0){     // V
-                    
+
                     Text("色んな思想方法を見ることができます。")
                         .font(.subheadline) //フォント→タイトル
                         .foregroundColor(.black) // 文字色→青
@@ -37,34 +34,33 @@ struct Shisou: View {
                         .frame(width: 300,height: 100)
                         .padding(.top, 30)
                         .padding(.bottom, 40)
-                        
-                    
+
                     Button {
                         modalFlg1 = true
                     } label: {
                         Image("Group 13")
-                        .resizable()
-                        .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                        .frame(width: 300)
-                        .padding(.bottom, 20)
+                            .resizable()
+                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                            .frame(width: 300)
+                            .padding(.bottom, 20)
                     }
                     .sheet(isPresented: $modalFlg1) {
                         Shisou1()
                     }
-                    
+
                     Button {
                         modalFlg2 = true
                     } label: {
                         Image("Group 14")
-                        .resizable()
-                        .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                        .frame(width: 300)
-                        .padding(.bottom, 20)
+                            .resizable()
+                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                            .frame(width: 300)
+                            .padding(.bottom, 20)
                     }
                     .sheet(isPresented: $modalFlg2) {
                         Shisou2()
                     }
-                    
+
                     Button {
                         modalFlg3 = true
                     } label: {
@@ -77,11 +73,11 @@ struct Shisou: View {
                     .sheet(isPresented: $modalFlg3) {
                         Shisou3()
                     }
-                   
+
                     Spacer()
-                    
+
                 }      // V
-                
+
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
@@ -93,24 +89,10 @@ struct Shisou: View {
                     }
                 }
                 // もどるボタン系
-                
             }
-            
         }
-        
-        
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 #Preview {
     Shisou()
