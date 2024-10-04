@@ -12,7 +12,7 @@ import SwiftData
 struct OtasukeapuriApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Todo.self,
+            Memo.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -26,7 +26,7 @@ struct OtasukeapuriApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .modelContainer(for: Memo.self)
         }
-        .modelContainer(for: Todo.self)
     }
 }

@@ -9,14 +9,14 @@ import Foundation
 import SwiftData
 
 @Model
-final class Todo {    // 保存のやつ
+final class Memo {
+    var title: String
     var content: String
-    var isDone: Bool
-    let registerDate: Date
 
-    init(content: String) {
+    init(title: String, content: String) {
+        self.title = title
         self.content = content
-        isDone = false
-        registerDate = Date()
     }
 }
+
+

@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ShinnkiMemo: View {
 
+    @Environment(\.modelContext) private var context
+    @Query private var memo: [Memo]
+
     @Environment(\.dismiss) var dismiss
-    @State private var inputName = ""
-    @State private var inputText = ""
+    @State private var inputTitle = ""
+    @State private var inputContent = ""
+
+    private func add() {
+        let data = Memo(title: inputTitle, content: inputContent)
+        context.insert(data)
+    }
 
     var body: some View {
 
@@ -26,21 +35,22 @@ struct ShinnkiMemo: View {
 
                     Button(action: {
                        print("保存ボタン")
+                        add()
                     }) {
                        Text("保存")
                     }
 
-                    TextField("タイトルを入力してください", text: $inputName)
+                    TextField("タイトルを入力してください", text: $inputTitle)
                         .textFieldStyle(.roundedBorder)
                         .padding()
 
-                    TextEditor(text: $inputText)
+                    TextEditor(text: $inputContent)
                         .frame(maxWidth:.infinity, alignment:.leading)
                         .border(.gray, width: 1)
 
                         .overlay(alignment: .topLeading) {
                             // 未入力の時、プレースホルダーを表示
-                            if inputText.isEmpty {
+                            if inputContent.isEmpty {
                                 Text("ここに文字を入力してください。")
                                     .allowsHitTesting(false) // タップ判定を無効化
                                     .foregroundColor(Color(uiColor: .placeholderText))
@@ -65,4 +75,5 @@ struct ShinnkiMemo: View {
 
 #Preview {
     ShinnkiMemo()
+        .modelContainer(for: Memo.self)
 }

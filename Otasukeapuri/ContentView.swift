@@ -13,7 +13,6 @@ struct ContentView: View {
 
     // 保存のやつ
     @Environment(\.modelContext) private var context
-    @Query private var todos: [Todo]
 
     @State private var textFieldInput = ""
     // 保存のやつ
@@ -79,7 +78,7 @@ extension UINavigationController: UIGestureRecognizerDelegate {
 
 #Preview  {
     ContentView()
-        .modelContainer(for: Todo.self)
+        .modelContainer(for: Memo.self)
 }
 
 
