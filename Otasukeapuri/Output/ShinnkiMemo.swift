@@ -23,6 +23,13 @@ struct ShinnkiMemo: View {
                     .toolbarBackground(.blue, for: .navigationBar)
 
                 VStack{
+
+                    Button(action: {
+                       print("保存ボタン")
+                    }) {
+                       Text("保存")
+                    }
+
                     TextField("タイトルを入力してください", text: $inputName)
                         .textFieldStyle(.roundedBorder)
                         .padding()
