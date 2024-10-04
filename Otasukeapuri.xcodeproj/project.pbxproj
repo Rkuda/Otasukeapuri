@@ -20,7 +20,6 @@
 		949E87992C8C0DC900D92EA8 /* OtasukeapuriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E87982C8C0DC900D92EA8 /* OtasukeapuriUITests.swift */; };
 		949E879B2C8C0DC900D92EA8 /* OtasukeapuriUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E879A2C8C0DC900D92EA8 /* OtasukeapuriUITestsLaunchTests.swift */; };
 		949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E87A72C8C0E3600D92EA8 /* Input.swift */; };
-		949E87AA2C8C0E4400D92EA8 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E87A92C8C0E4400D92EA8 /* Output.swift */; };
 		94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F252CA2655C00E750B8 /* Gatya.swift */; };
 		94A57F282CA2658600E750B8 /* Shisou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F272CA2658600E750B8 /* Shisou.swift */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		949E87982C8C0DC900D92EA8 /* OtasukeapuriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtasukeapuriUITests.swift; sourceTree = "<group>"; };
 		949E879A2C8C0DC900D92EA8 /* OtasukeapuriUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtasukeapuriUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		949E87A72C8C0E3600D92EA8 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
-		949E87A92C8C0E4400D92EA8 /* Output.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
 		94A57F252CA2655C00E750B8 /* Gatya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gatya.swift; sourceTree = "<group>"; };
 		94A57F272CA2658600E750B8 /* Shisou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +101,6 @@
 		947927D42CAF92B70067B367 /* Output */ = {
 			isa = PBXGroup;
 			children = (
-				949E87A92C8C0E4400D92EA8 /* Output.swift */,
 				9454F0F32CA45101001FBD22 /* ShinnkiMemo.swift */,
 			);
 			path = Output;
@@ -310,7 +307,6 @@
 			files = (
 				94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */,
 				9454F0F42CA45101001FBD22 /* ShinnkiMemo.swift in Sources */,
-				949E87AA2C8C0E4400D92EA8 /* Output.swift in Sources */,
 				94A57F282CA2658600E750B8 /* Shisou.swift in Sources */,
 				949E877E2C8C0DC500D92EA8 /* ContentView.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,

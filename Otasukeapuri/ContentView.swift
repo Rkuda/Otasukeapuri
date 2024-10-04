@@ -43,7 +43,7 @@ struct ContentView: View {
                             .padding(.top,50)
                     }
 
-                    NavigationLink(destination: Output().navigationBarBackButtonHidden(true).navigationTitle("アウトプット")) {
+                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("アウトプット")) {
                         Image("Group 3")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
