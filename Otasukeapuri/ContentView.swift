@@ -43,16 +43,19 @@ struct ContentView: View {
                     }
                     NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
                         Text("すべてのメモ")
+                            .font(.title2)
                             .padding(.top,50)
                             .foregroundColor(Color.white)
                     }
                     NavigationLink(destination: Folder().navigationBarBackButtonHidden(true).navigationTitle("フォルダ分け")) {
                         Text("フォルダ分け")
+                            .font(.title2)
                             .padding(.top,20)
                             .foregroundColor(Color.white)
                     }
                     NavigationLink(destination: Nekaseru().navigationBarBackButtonHidden(true).navigationTitle("寝かせる")) {
                         Text("寝かせる")
+                            .font(.title2)
                             .padding(.top,20)
                             .foregroundColor(Color.white)
                     }
