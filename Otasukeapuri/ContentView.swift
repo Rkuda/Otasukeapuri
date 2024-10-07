@@ -34,20 +34,20 @@ struct ContentView: View {
                         .frame(width: 200)
                         .padding(.top,30)
 
-                    NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("インプット")) {
-                        Image("Group 2")
+                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("新規メモ")) {
+                        Image("Group 26")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 300)
                             .padding(.top,50)
                     }
 
-                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("アウトプット")) {
-                        Image("Group 3")
+                    NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("インプット")) {
+                        Image("Group 2")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 300)
-                            .padding(.top,20)
+                            .padding(.top,50)
                     }
 
                     Image(decorative: "lamp1")

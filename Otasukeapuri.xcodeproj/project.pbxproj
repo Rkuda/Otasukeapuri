@@ -11,6 +11,9 @@
 		9454F0F02CA4235E001FBD22 /* Shisou2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454F0EF2CA4235E001FBD22 /* Shisou2.swift */; };
 		9454F0F22CA4236D001FBD22 /* Shisou3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454F0F12CA4236D001FBD22 /* Shisou3.swift */; };
 		9454F0F42CA45101001FBD22 /* ShinnkiMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454F0F32CA45101001FBD22 /* ShinnkiMemo.swift */; };
+		947927D72CB4286E0067B367 /* SubetenoMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947927D62CB4286E0067B367 /* SubetenoMemo.swift */; };
+		947927D92CB428B80067B367 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947927D82CB428B80067B367 /* Folder.swift */; };
+		947927DB2CB428CA0067B367 /* Nekaseru.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947927DA2CB428CA0067B367 /* Nekaseru.swift */; };
 		949E877C2C8C0DC500D92EA8 /* OtasukeapuriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */; };
 		949E877E2C8C0DC500D92EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E877D2C8C0DC500D92EA8 /* ContentView.swift */; };
 		949E87802C8C0DC500D92EA8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E877F2C8C0DC500D92EA8 /* Item.swift */; };
@@ -46,6 +49,9 @@
 		9454F0EF2CA4235E001FBD22 /* Shisou2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou2.swift; sourceTree = "<group>"; };
 		9454F0F12CA4236D001FBD22 /* Shisou3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou3.swift; sourceTree = "<group>"; };
 		9454F0F32CA45101001FBD22 /* ShinnkiMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinnkiMemo.swift; sourceTree = "<group>"; };
+		947927D62CB4286E0067B367 /* SubetenoMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubetenoMemo.swift; sourceTree = "<group>"; };
+		947927D82CB428B80067B367 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		947927DA2CB428CA0067B367 /* Nekaseru.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nekaseru.swift; sourceTree = "<group>"; };
 		949E87782C8C0DC400D92EA8 /* Otasukeapuri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otasukeapuri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtasukeapuriApp.swift; sourceTree = "<group>"; };
 		949E877D2C8C0DC500D92EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,9 @@
 				947927D32CAF926D0067B367 /* Shisou */,
 				949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */,
 				949E877D2C8C0DC500D92EA8 /* ContentView.swift */,
+				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
+				947927D82CB428B80067B367 /* Folder.swift */,
+				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
 				949E877F2C8C0DC500D92EA8 /* Item.swift */,
 				949E87812C8C0DC800D92EA8 /* Assets.xcassets */,
 				949E87832C8C0DC800D92EA8 /* Preview Content */,
@@ -309,12 +318,15 @@
 				9454F0F42CA45101001FBD22 /* ShinnkiMemo.swift in Sources */,
 				94A57F282CA2658600E750B8 /* Shisou.swift in Sources */,
 				949E877E2C8C0DC500D92EA8 /* ContentView.swift in Sources */,
+				947927D72CB4286E0067B367 /* SubetenoMemo.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,
 				949E87802C8C0DC500D92EA8 /* Item.swift in Sources */,
 				949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */,
+				947927DB2CB428CA0067B367 /* Nekaseru.swift in Sources */,
 				9454F0F02CA4235E001FBD22 /* Shisou2.swift in Sources */,
 				9454F0F22CA4236D001FBD22 /* Shisou3.swift in Sources */,
 				949E877C2C8C0DC500D92EA8 /* OtasukeapuriApp.swift in Sources */,
+				947927D92CB428B80067B367 /* Folder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
