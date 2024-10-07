@@ -75,5 +75,4 @@ struct ShinnkiMemo: View {
 
 #Preview {
     ShinnkiMemo()
-        .modelContainer(for: Memo.self)
 }

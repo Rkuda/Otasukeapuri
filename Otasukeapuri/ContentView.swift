@@ -61,8 +61,9 @@ struct ContentView: View {
                         Image(decorative: "lamp1")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 200)
-                            .padding(.top,50)
+                            .frame(width: 150)
+                            .padding(.top,120)
+                           
 
                         NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("お助け")) {
                             Image("Group 21")
