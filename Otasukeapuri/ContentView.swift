@@ -28,11 +28,11 @@ struct ContentView: View {
 
 
                 VStack(spacing: 0){    // VStack始まり
-                    Image(decorative: "Group 9")
+                    Image(decorative: "logo")
                         .resizable()
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                        .frame(width: 300)
-                        .padding(.top,50)
+                        .frame(width: 200)
+                        .padding(.top,30)
 
                     NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("インプット")) {
                         Image("Group 2")
@@ -50,10 +50,10 @@ struct ContentView: View {
                             .padding(.top,20)
                     }
 
-                    Image(decorative: "Group 10")
+                    Image(decorative: "lamp1")
                         .resizable()
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                        .frame(width: 100)
+                        .frame(width: 200)
                         .padding(.top,50)
 
                 }    // VStack始まり
