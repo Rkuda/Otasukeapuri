@@ -41,21 +41,37 @@ struct ContentView: View {
                             .frame(width: 300)
                             .padding(.top,50)
                     }
+                    NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
+                        Text("すべてのメモ")
+                            .padding(.top,50)
+                            .foregroundColor(Color.white)
+                    }
+                    NavigationLink(destination: Folder().navigationBarBackButtonHidden(true).navigationTitle("フォルダ分け")) {
+                        Text("フォルダ分け")
+                            .padding(.top,20)
+                            .foregroundColor(Color.white)
+                    }
+                    NavigationLink(destination: Nekaseru().navigationBarBackButtonHidden(true).navigationTitle("寝かせる")) {
+                        Text("寝かせる")
+                            .padding(.top,20)
+                            .foregroundColor(Color.white)
+                    }
+                    HStack{    // HStack始まり
 
-                    NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("インプット")) {
-                        Image("Group 2")
+                        Image(decorative: "lamp1")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 300)
+                            .frame(width: 200)
                             .padding(.top,50)
-                    }
 
-                    Image(decorative: "lamp1")
-                        .resizable()
-                        .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                        .frame(width: 200)
-                        .padding(.top,50)
-
+                        NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("お助け")) {
+                            Image("Group 21")
+                                .resizable()
+                                .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                                .frame(width: 150)
+                                .padding(.top,50)
+                        }
+                    }    // HStack始まり
                 }    // VStack始まり
             }    // ZStackおわり
         }   // NavigationStackおわり
