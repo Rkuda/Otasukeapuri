@@ -22,10 +22,13 @@ struct ContentView: View {
         NavigationStack{    // NavigationStackおわり
 
             ZStack{     // ZStack始まり
-                Color(red: 0.8, green: 0.6, blue: 0.3)
+                Color(red: 0.7, green: 0.5, blue: 0.2)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
-
+                Image("Rectangle 27")
+                      .resizable()
+                      .ignoresSafeArea()
+                      .scaledToFill()
 
                 VStack(spacing: 0){    // VStack始まり
                     Image(decorative: "logo")
@@ -68,8 +71,8 @@ struct ContentView: View {
                             .padding(.top,120)
                            
 
-                        NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("お助け")) {
-                            Image("Group 21")
+                        NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("HELP")) {
+                            Image("Group 32")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
                                 .frame(width: 150)
