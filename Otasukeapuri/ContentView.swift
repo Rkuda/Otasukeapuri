@@ -25,7 +25,7 @@ struct ContentView: View {
                 Color(red: 0.7, green: 0.5, blue: 0.2)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
-                Image("Rectangle 27")
+                Image("Intersect")
                       .resizable()
                       .ignoresSafeArea()
                       .scaledToFill()
@@ -67,7 +67,7 @@ struct ContentView: View {
                         Image(decorative: "lamp1")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 150)
+                            .frame(width: 130)
                             .padding(.top,120)
                            
 
@@ -75,7 +75,7 @@ struct ContentView: View {
                             Image("Group 32")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                                .frame(width: 150)
+                                .frame(width: 180)
                                 .padding(.top,50)
                         }
                     }    // HStack始まり
