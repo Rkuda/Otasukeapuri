@@ -6,14 +6,23 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct SubetenoMemo: View {
     @Environment(\.dismiss) var dismiss
+    @Query private var memo: [Memo]
+
     var body: some View {
 
         NavigationStack{
-            ZStack{
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            VStack{
+                List(memo) { memo in
+                    HStack {
+                        Text(memo.title)
+                        Spacer()
+                        Text(memo.content)
+                    }
+                }
             }
             // もどるボタン系
             .navigationBarBackButtonHidden(true)
