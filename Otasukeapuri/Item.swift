@@ -9,7 +9,8 @@ import Foundation
 import SwiftData
 
 @Model
-final class Memo {
+final class Memo: Identifiable {
+    var id = UUID()
     var title: String
     var content: String
 

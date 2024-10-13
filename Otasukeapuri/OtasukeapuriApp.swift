@@ -26,7 +26,7 @@ struct OtasukeapuriApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .modelContainer(for: Memo.self)
         }
+        .modelContainer(for: Memo.self)
     }
 }

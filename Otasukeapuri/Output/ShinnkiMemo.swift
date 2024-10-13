@@ -10,7 +10,7 @@ import SwiftData
 
 struct ShinnkiMemo: View {
 
-    @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) var context
     @Query private var memo: [Memo]
 
     @Environment(\.dismiss) var dismiss
@@ -20,6 +20,15 @@ struct ShinnkiMemo: View {
     private func add() {
         let data = Memo(title: inputTitle, content: inputContent)
         context.insert(data)
+        saveContext()
+    }
+
+    private func saveContext() {
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
     var body: some View {
@@ -34,10 +43,10 @@ struct ShinnkiMemo: View {
                 VStack{
 
                     Button(action: {
-                       print("保存ボタン")
                         add()
+                        print(memo)
                     }) {
-                       Text("保存")
+                        Text("保存")
                     }
 
                     TextField("タイトルを入力してください", text: $inputTitle)
