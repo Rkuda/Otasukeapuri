@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Folder: View {
     @Environment(\.dismiss) var dismiss
+    @Query private var memo: [Memo]
+    
     var body: some View {
         NavigationStack{
             ZStack{

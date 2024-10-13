@@ -16,9 +16,10 @@ struct ShinnkiMemo: View {
     @Environment(\.dismiss) var dismiss
     @State private var inputTitle = ""
     @State private var inputContent = ""
+    @State private var state: MemoStatus = MemoStatus.draft
 
     private func add() {
-        let data = Memo(title: inputTitle, content: inputContent)
+        let data = Memo(title: inputTitle, content: inputContent, state: state)
         context.insert(data)
         saveContext()
     }
@@ -54,6 +55,19 @@ struct ShinnkiMemo: View {
                     TextField("タイトルを入力してください", text: $inputTitle)
                         .textFieldStyle(.roundedBorder)
                         .padding()
+
+                    Menu("ファイルを選択"){
+                        Button("下書き"){
+                            state = MemoStatus.draft
+                        }
+                        Button("清書"){
+                            state = MemoStatus.final
+                        }
+                        Button("使わない"){
+                            state = MemoStatus.unused
+                        }
+                    }
+                    .menuStyle(.button)
 
                     TextEditor(text: $inputContent)
                         .frame(maxWidth:.infinity, alignment:.leading)
