@@ -43,7 +43,9 @@ struct ShinnkiMemo: View {
                 VStack{
 
                     Button(action: {
-                        add()
+                        if !inputTitle.isEmpty || !inputContent.isEmpty {
+                            add()
+                        }
                         print(memo)
                     }) {
                         Text("保存")
