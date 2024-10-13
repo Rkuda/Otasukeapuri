@@ -69,14 +69,13 @@ struct ContentView: View {
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 130)
                             .padding(.top,120)
-                           
 
                         NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("HELP")) {
-                            Image("Group 32")
+                            Image("Group 36")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
                                 .frame(width: 180)
-                                .padding(.top,50)
+                                .padding(.top,60)
                         }
                     }    // HStack始まり
                 }    // VStack始まり
