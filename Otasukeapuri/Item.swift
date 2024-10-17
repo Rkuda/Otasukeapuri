@@ -23,7 +23,7 @@ final class Memo: Identifiable {
     }
 }
 
-enum MemoStatus: String {
+enum MemoStatus: String, Codable {
     case draft = "下書き"
     case final = "清書"
     case unused = "使わない"
