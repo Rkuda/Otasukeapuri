@@ -32,6 +32,10 @@ struct ShinnkiMemo: View {
         }
     }
 
+    init() {
+            UITextView.appearance().backgroundColor = .clear
+        }
+
     var body: some View {
 
         NavigationStack{
@@ -40,48 +44,62 @@ struct ShinnkiMemo: View {
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
                     .toolbarBackground(.blue, for: .navigationBar)
+                Image("背景紙")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
 
                 VStack{
 
-                    Button(action: {
-                        if !inputTitle.isEmpty || !inputContent.isEmpty {
-                            add()
-                        }
-                        print(memo)
-                    }) {
-                        Text("保存")
-                    }
+                    HStack{
 
-                    Menu("ファイルを選択"){
-                        Button("下書き"){
-                            state = MemoStatus.draft
+                        Menu("ファイルを選択"){
+                            Button("下書き"){
+                                state = MemoStatus.draft
+                            }
+                            Button("清書"){
+                                state = MemoStatus.final
+                            }
+                            Button("使わない"){
+                                state = MemoStatus.unused
+                            }
                         }
-                        Button("清書"){
-                            state = MemoStatus.final
-                        }
-                        Button("使わない"){
-                            state = MemoStatus.unused
+                        .menuStyle(.button)
+                        .foregroundColor(.black)
+
+                        Spacer()
+
+                        Button(action: {
+                            if !inputTitle.isEmpty || !inputContent.isEmpty {
+                                add()
+                            }
+                            print(memo)
+                        }) {
+                            Image("Save")
+                                .resizable()
+                                .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                                .frame(width: 180)
                         }
                     }
-                    .menuStyle(.button)
 
                     TextField("タイトルを入力してください", text: $inputTitle)
                         .textFieldStyle(.roundedBorder)
-                        .padding()
+                        .padding(.bottom,10)
 
-                    TextEditor(text: $inputContent)
-                        .frame(maxWidth:.infinity, alignment:.leading)
-                        .border(.gray, width: 1)
 
-                        .overlay(alignment: .topLeading) {
-                            // 未入力の時、プレースホルダーを表示
-                            if inputContent.isEmpty {
-                                Text("ここに文字を入力してください。")
-                                    .allowsHitTesting(false) // タップ判定を無効化
-                                    .foregroundColor(Color(uiColor: .placeholderText))
-                                    .padding(6)
+                    ZStack{
+                        TextEditor(text: $inputContent)
+                            .frame(maxWidth:.infinity, alignment:.leading)
+                            .overlay(alignment: .topLeading) {
+                                // 未入力の時、プレースホルダーを表示
+                                if inputContent.isEmpty {
+                                    Text("ここに文字を入力してください。")
+                                        .allowsHitTesting(false) // タップ判定を無効化
+                                        .foregroundColor(Color(uiColor: .placeholderText))
+                                        .padding(6)
+                                }
                             }
-                        }
+                    }
                 }
                 .padding(.all, 30)
 
@@ -100,4 +118,5 @@ struct ShinnkiMemo: View {
 
 #Preview {
     ShinnkiMemo()
+        .modelContainer(for: Memo.self)
 }

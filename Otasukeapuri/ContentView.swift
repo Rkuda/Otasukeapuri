@@ -25,7 +25,7 @@ struct ContentView: View {
                 Color(red: 0.7, green: 0.5, blue: 0.2)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
-                Image("背景紙")
+                Image("背景紙ロゴあり")
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
@@ -37,7 +37,7 @@ struct ContentView: View {
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 320)
-                            .padding(.top,50)
+                            .padding(.bottom,10)
                     }
 
                     HStack{
@@ -46,14 +46,14 @@ struct ContentView: View {
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
                                 .frame(width: 180)
-                                .padding(.top,20)
+
                         }
                         NavigationLink(destination: Nekaseru().navigationBarBackButtonHidden(true).navigationTitle("Leave")) {
                             Image("Leave4")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
                                 .frame(width: 180)
-                                .padding(.top,20)
+
                         }
                     }
 
@@ -62,7 +62,6 @@ struct ContentView: View {
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
                                 .frame(width: 200)
-                                .padding(.top,60)
                         }
 
                 }    // VStack始まり

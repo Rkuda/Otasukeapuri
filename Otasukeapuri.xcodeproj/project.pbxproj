@@ -26,6 +26,7 @@
 		94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F252CA2655C00E750B8 /* Gatya.swift */; };
 		94A57F282CA2658600E750B8 /* Shisou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F272CA2658600E750B8 /* Shisou.swift */; };
 		94D522422CC3A8A400DA38C7 /* Tabview_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522412CC3A8A400DA38C7 /* Tabview_test.swift */; };
+		94D522442CC3F8FB00DA38C7 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522432CC3F8FB00DA38C7 /* TabItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		94A57F252CA2655C00E750B8 /* Gatya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gatya.swift; sourceTree = "<group>"; };
 		94A57F272CA2658600E750B8 /* Shisou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou.swift; sourceTree = "<group>"; };
 		94D522412CC3A8A400DA38C7 /* Tabview_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabview_test.swift; sourceTree = "<group>"; };
+		94D522432CC3F8FB00DA38C7 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */,
 				949E877D2C8C0DC500D92EA8 /* ContentView.swift */,
 				94D522412CC3A8A400DA38C7 /* Tabview_test.swift */,
+				94D522432CC3F8FB00DA38C7 /* TabItemView.swift */,
 				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
 				947927D82CB428B80067B367 /* Folder.swift */,
 				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
@@ -320,6 +323,7 @@
 				94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */,
 				9454F0F42CA45101001FBD22 /* ShinnkiMemo.swift in Sources */,
 				94A57F282CA2658600E750B8 /* Shisou.swift in Sources */,
+				94D522442CC3F8FB00DA38C7 /* TabItemView.swift in Sources */,
 				949E877E2C8C0DC500D92EA8 /* ContentView.swift in Sources */,
 				947927D72CB4286E0067B367 /* SubetenoMemo.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,

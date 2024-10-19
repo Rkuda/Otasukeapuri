@@ -23,20 +23,26 @@ struct Tabview_test: View {
                     .scaledToFill()
 
                 TabView{
-                    ShinnkiMemo() //1枚目の子ビュー
+                    ContentView() //1枚目の子ビュー
                                     .tabItem {
-                                        Image("ペン")
+                                        Image("Group 45")
+                                            .font(.system(size: 60))
+                                    }
+                    SubetenoMemo() //1枚目の子ビュー
+                                    .tabItem {
+                                        Image("Group 46")
                                             .resizable()
-                                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                                            .frame(width:50)
-                                            .padding()
-                                        Text("新規メモ")
-
-
+                                                                .frame(width: 10.0, height: 10.0)
+                                    }
+                    Nekaseru() //1枚目の子ビュー
+                                    .tabItem {
+                                        Image("Group 47")
+                                            .resizable()
+                                                                .frame(width: 10.0, height: 10.0)
                                     }
                                 Input() //2枚目の子ビュー
                                     .tabItem {
-                                        Image(systemName: "2.circle.fill") //タブバーの②
+                                        Image("Group 48")
                                     }
                 }
             }    // ZStackおわり

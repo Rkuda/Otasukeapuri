@@ -22,7 +22,9 @@ struct SubetenoMemo: View {
                         Spacer()
                         Text(memo.content)
                     }
+
                 }
+
             }
             // もどるボタン系
             .navigationBarBackButtonHidden(true)
@@ -37,6 +39,7 @@ struct SubetenoMemo: View {
             // もどるボタン系
         }
     }
+
 }
 
 #Preview {
