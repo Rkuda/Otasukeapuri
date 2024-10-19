@@ -25,48 +25,46 @@ struct ContentView: View {
                 Color(red: 0.7, green: 0.5, blue: 0.2)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
-                Image("Haikei")
-                      .resizable()
-                      .ignoresSafeArea()
-                      .scaledToFill()
+                Image("背景紙")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
 
                 VStack(spacing: 0){    // VStack始まり
 
-                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("NewIdea")) {
+                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true)) {
                         Image("NewIdea4")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 300)
+                            .frame(width: 320)
                             .padding(.top,50)
                     }
-                    NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
-                        Text("すべてのメモ")
-                            .font(.title2)
-                            .padding(.top,50)
-                            .foregroundColor(Color.white)
-                    }
-                    NavigationLink(destination: Folder().navigationBarBackButtonHidden(true).navigationTitle("フォルダ分け")) {
-                        Text("フォルダ分け")
-                            .font(.title2)
-                            .padding(.top,20)
-                            .foregroundColor(Color.white)
-                    }
-                    NavigationLink(destination: Nekaseru().navigationBarBackButtonHidden(true).navigationTitle("寝かせる")) {
-                        Text("寝かせる")
-                            .font(.title2)
-                            .padding(.top,20)
-                            .foregroundColor(Color.white)
-                    }
-                    HStack{    // HStack始まり
 
-                        NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("HELP")) {
-                            Image("Group 36")
+                    HStack{
+                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("Library")) {
+                            Image("Library4")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
                                 .frame(width: 180)
+                                .padding(.top,20)
+                        }
+                        NavigationLink(destination: Nekaseru().navigationBarBackButtonHidden(true).navigationTitle("Leave")) {
+                            Image("Leave4")
+                                .resizable()
+                                .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                                .frame(width: 180)
+                                .padding(.top,20)
+                        }
+                    }
+
+                        NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("Hint")) {
+                            Image("Hint4")
+                                .resizable()
+                                .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                                .frame(width: 200)
                                 .padding(.top,60)
                         }
-                    }    // HStack始まり
+
                 }    // VStack始まり
             }    // ZStackおわり
         }   // NavigationStackおわり

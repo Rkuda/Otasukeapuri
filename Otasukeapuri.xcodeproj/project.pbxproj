@@ -25,6 +25,7 @@
 		949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E87A72C8C0E3600D92EA8 /* Input.swift */; };
 		94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F252CA2655C00E750B8 /* Gatya.swift */; };
 		94A57F282CA2658600E750B8 /* Shisou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F272CA2658600E750B8 /* Shisou.swift */; };
+		94D522422CC3A8A400DA38C7 /* Tabview_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522412CC3A8A400DA38C7 /* Tabview_test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		949E87A72C8C0E3600D92EA8 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		94A57F252CA2655C00E750B8 /* Gatya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gatya.swift; sourceTree = "<group>"; };
 		94A57F272CA2658600E750B8 /* Shisou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou.swift; sourceTree = "<group>"; };
+		94D522412CC3A8A400DA38C7 /* Tabview_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabview_test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				947927D32CAF926D0067B367 /* Shisou */,
 				949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */,
 				949E877D2C8C0DC500D92EA8 /* ContentView.swift */,
+				94D522412CC3A8A400DA38C7 /* Tabview_test.swift */,
 				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
 				947927D82CB428B80067B367 /* Folder.swift */,
 				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
@@ -324,6 +327,7 @@
 				949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */,
 				947927DB2CB428CA0067B367 /* Nekaseru.swift in Sources */,
 				9454F0F02CA4235E001FBD22 /* Shisou2.swift in Sources */,
+				94D522422CC3A8A400DA38C7 /* Tabview_test.swift in Sources */,
 				9454F0F22CA4236D001FBD22 /* Shisou3.swift in Sources */,
 				949E877C2C8C0DC500D92EA8 /* OtasukeapuriApp.swift in Sources */,
 				947927D92CB428B80067B367 /* Folder.swift in Sources */,
