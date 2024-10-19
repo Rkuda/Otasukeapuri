@@ -7,12 +7,28 @@
 
 import SwiftUI
 
+
 struct TabItemView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+
+    let tabItem: TabItem
+        @Binding var selected: TabItem
+
+        var body: some View {
+           
+            Image("\(tabItem)")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            // 選択状態によって、サイズや間隔を調整する.
+                   .frame(width: tabItem == selected ? 95 : 70)
+                   
+                   .offset(y: tabItem == selected ? -15 : 0)
+                .onTapGesture {
+                    selected = tabItem // タップしたら自身をselectedに.
+                }
+        }
 }
 
 #Preview {
-    TabItemView()
+    TabView_costom()
+        .modelContainer(for: Memo.self)
 }

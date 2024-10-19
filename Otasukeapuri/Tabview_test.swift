@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct Tabview_test: View {
-
+    
+   
     var body: some View {
 
         NavigationStack{    // NavigationStackおわり
@@ -23,24 +24,24 @@ struct Tabview_test: View {
                     .scaledToFill()
 
                 TabView{
-                    ContentView() //1枚目の子ビュー
+                    ContentView()
                                     .tabItem {
                                         Image("Group 45")
                                             .font(.system(size: 60))
                                     }
-                    SubetenoMemo() //1枚目の子ビュー
+                    SubetenoMemo()
                                     .tabItem {
                                         Image("Group 46")
                                             .resizable()
                                                                 .frame(width: 10.0, height: 10.0)
                                     }
-                    Nekaseru() //1枚目の子ビュー
+                    Nekaseru()
                                     .tabItem {
                                         Image("Group 47")
                                             .resizable()
                                                                 .frame(width: 10.0, height: 10.0)
                                     }
-                                Input() //2枚目の子ビュー
+                                Input() 
                                     .tabItem {
                                         Image("Group 48")
                                     }

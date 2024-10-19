@@ -28,3 +28,16 @@ enum MemoStatus: String, Codable {
     case final = "清書"
     case unused = "使わない"
 }
+
+enum TabItem: String,CaseIterable {
+    case memo
+    case library
+    case leave
+    case hint
+
+    var name: String {
+            "\(self.rawValue).png"
+        }
+
+}
+
