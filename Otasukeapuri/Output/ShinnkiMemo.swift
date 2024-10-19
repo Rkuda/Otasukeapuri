@@ -52,10 +52,6 @@ struct ShinnkiMemo: View {
                         Text("保存")
                     }
 
-                    TextField("タイトルを入力してください", text: $inputTitle)
-                        .textFieldStyle(.roundedBorder)
-                        .padding()
-
                     Menu("ファイルを選択"){
                         Button("下書き"){
                             state = MemoStatus.draft
@@ -68,6 +64,10 @@ struct ShinnkiMemo: View {
                         }
                     }
                     .menuStyle(.button)
+
+                    TextField("タイトルを入力してください", text: $inputTitle)
+                        .textFieldStyle(.roundedBorder)
+                        .padding()
 
                     TextEditor(text: $inputContent)
                         .frame(maxWidth:.infinity, alignment:.leading)

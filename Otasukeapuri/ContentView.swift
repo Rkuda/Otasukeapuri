@@ -25,20 +25,15 @@ struct ContentView: View {
                 Color(red: 0.7, green: 0.5, blue: 0.2)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
-                Image("Intersect")
+                Image("Haikei")
                       .resizable()
                       .ignoresSafeArea()
                       .scaledToFill()
 
                 VStack(spacing: 0){    // VStack始まり
-                    Image(decorative: "logo")
-                        .resizable()
-                        .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                        .frame(width: 200)
-                        .padding(.top,30)
 
-                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("新規メモ")) {
-                        Image("Group 26")
+                    NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true).navigationTitle("NewIdea")) {
+                        Image("NewIdea4")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 300)
@@ -63,12 +58,6 @@ struct ContentView: View {
                             .foregroundColor(Color.white)
                     }
                     HStack{    // HStack始まり
-
-                        Image(decorative: "lamp1")
-                            .resizable()
-                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 130)
-                            .padding(.top,120)
 
                         NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("HELP")) {
                             Image("Group 36")
