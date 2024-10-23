@@ -7,10 +7,24 @@
 
 import SwiftUI
 import SwiftData
+//Listの背景を変更するためのもの
+extension UICollectionReusableView {
+    override open var backgroundColor: UIColor? {
+        get { .clear }
+        set { }
+    }
+}
+//Listの背景を変更するためのもの
 
 struct SubetenoMemo: View {
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
+
+    //Listの背景を変更するためのもの
+    init() {
+            UICollectionView.appearance().backgroundColor = .clear
+    }
+    //Listの背景を変更するためのもの
 
     var body: some View {
 
@@ -21,6 +35,7 @@ struct SubetenoMemo: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                 VStack{
+
                     List(memo) { memo in
                         HStack {
                             Text(memo.title)
@@ -29,7 +44,8 @@ struct SubetenoMemo: View {
                         }
                         
                     }
-                    
+                    .padding(.top,30)
+
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)

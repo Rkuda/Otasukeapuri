@@ -66,6 +66,7 @@ struct ShinnkiMemo: View {
                         }
                         .menuStyle(.button)
                         .foregroundColor(.black)
+                        .font(.custom("HannariMincho-Regular", size: 18))
 
                         Spacer()
 
@@ -84,6 +85,7 @@ struct ShinnkiMemo: View {
 
                     TextField("タイトルを入力してください", text: $inputTitle)
                         .textFieldStyle(.roundedBorder)
+                        .font(.custom("HannariMincho-Regular", size: 16))
                         .padding(.bottom,10)
 
 
@@ -96,6 +98,7 @@ struct ShinnkiMemo: View {
                                     Text("ここに文字を入力してください。")
                                         .allowsHitTesting(false) // タップ判定を無効化
                                         .foregroundColor(Color(uiColor: .placeholderText))
+                                        .font(.custom("HannariMincho-Regular", size: 16))
                                         .padding(6)
                                 }
                             }
@@ -103,8 +106,7 @@ struct ShinnkiMemo: View {
                 }
                 .padding(.all, 30)
 
-                /*
-                 戻るボタン
+
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "chevron.left")
@@ -113,7 +115,7 @@ struct ShinnkiMemo: View {
                             }
                     }
                 }
-                 */
+
             }
         }
     }

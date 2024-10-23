@@ -50,10 +50,11 @@ struct ContentView: View {
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 320)
                             .padding(.bottom,10)
-                            .padding(.top,20)
+                            .padding(.top,50)
                     }
                     Text("新しいアイデアをメモしましょう。")
-                        .padding(.bottom,30)
+                    .padding(.bottom,30)
+                    .font(.custom("HannariMincho-Regular", size: 18))
 
                     HStack(spacing: 0){
                         NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("Library")) {
