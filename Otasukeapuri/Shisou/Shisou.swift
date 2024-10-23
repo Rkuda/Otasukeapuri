@@ -26,10 +26,10 @@ struct Shisou: View {
                 VStack(spacing: 0){     // V
 
                     Text("色んな思想方法を見ることができます。")
-                        .font(.subheadline) //フォント→タイトル
+                        .font(.custom("HannariMincho-Regular", size: 15))
                         .foregroundColor(.white) // 文字色
-                        .frame(width: 300,height: 80)
-                        .padding(.bottom,50)
+                        .frame(width: 300,height: 30)
+
                         .padding(.top,50)
 
 
@@ -37,14 +37,14 @@ struct Shisou: View {
                         modalFlg1 = true
                     } label: {
                         Text("オズボーンのチェックリスト")
-                            .font(.title3)
+                            .font(.custom("HannariMincho-Regular", size: 20))
                             .foregroundColor(.black)
                             .padding(.all, 30) // TextViewの周りの余白を設定
                             .background(.white) // 背景色→黄色
                             .cornerRadius(20)
                             .frame(width: 350,height: 100)
                             .padding(.bottom, 10)
-                            .padding(.top, 100)
+                            .padding(.top, 30)
                     }
                     .sheet(isPresented: $modalFlg1) {
                         Shisou1()
@@ -85,6 +85,7 @@ struct Shisou: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "chevron.left")
+                            .foregroundColor(.white)
                             .onTapGesture {
                                 dismiss()
                             }

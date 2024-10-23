@@ -44,17 +44,19 @@ struct ContentView: View {
 
                 VStack(spacing: 0){    // VStack始まり
 
+                    Text("新しいアイデアをメモしましょう。")
+                    .padding(.top,90)
+                    .padding(.bottom,10)
+                    .font(.custom("HannariMincho-Regular", size: 18))
+
                     NavigationLink(destination: ShinnkiMemo().navigationBarBackButtonHidden(true)) {
                         Image("NewIdea4")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 320)
-                            .padding(.bottom,10)
-                            .padding(.top,50)
+
+
                     }
-                    Text("新しいアイデアをメモしましょう。")
-                    .padding(.bottom,30)
-                    .font(.custom("HannariMincho-Regular", size: 18))
 
                     HStack(spacing: 0){
                         NavigationLink(destination: Folder().navigationBarBackButtonHidden(true).navigationTitle("Library")) {
@@ -81,6 +83,7 @@ struct ContentView: View {
                         }
 
                 }    // VStack始まり
+                
             }    // ZStackおわり
         }   // NavigationStackおわり
     }

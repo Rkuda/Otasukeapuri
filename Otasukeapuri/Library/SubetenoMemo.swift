@@ -36,14 +36,15 @@ struct SubetenoMemo: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                 VStack{
+                
+                    List(memo) { memo in
 
-                    List(memo) { memo in 
                         HStack {
                             Text(memo.title)
                             Spacer()
                             Text(memo.content)
                         }
-                        
+
                     }
                     .padding(.top,30)
 
@@ -63,6 +64,8 @@ struct SubetenoMemo: View {
             }
         }
     }
+
+
 
 }
 

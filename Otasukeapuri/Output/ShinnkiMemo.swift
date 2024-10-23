@@ -33,8 +33,8 @@ struct ShinnkiMemo: View {
     }
 
     init() {
-            UITextView.appearance().backgroundColor = .clear
-        }
+        UITextView.appearance().backgroundColor = .clear
+    }
 
     var body: some View {
 
@@ -50,7 +50,7 @@ struct ShinnkiMemo: View {
                     .scaledToFill()
 
                 VStack{
-
+                    Spacer()
                     HStack{
 
                         Menu("ファイルを選択"){
@@ -83,6 +83,7 @@ struct ShinnkiMemo: View {
                         }
                     }
 
+
                     TextField("タイトルを入力してください", text: $inputTitle)
                         .textFieldStyle(.roundedBorder)
                         .font(.custom("HannariMincho-Regular", size: 16))
@@ -91,6 +92,7 @@ struct ShinnkiMemo: View {
 
                     ZStack{
                         TextEditor(text: $inputContent)
+                            .font(.custom("HannariMincho-Regular", size: 18))
                             .frame(maxWidth:.infinity, alignment:.leading)
                             .overlay(alignment: .topLeading) {
                                 // 未入力の時、プレースホルダーを表示
@@ -103,8 +105,10 @@ struct ShinnkiMemo: View {
                                 }
                             }
                     }
+                    Spacer()
                 }
                 .padding(.all, 30)
+                .ignoresSafeArea(.keyboard)
 
 
                 .toolbar {
@@ -115,8 +119,8 @@ struct ShinnkiMemo: View {
                             }
                     }
                 }
-
             }
+
         }
     }
 }

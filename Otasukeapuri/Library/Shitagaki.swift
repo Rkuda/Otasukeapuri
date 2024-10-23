@@ -30,9 +30,9 @@ struct Shitagaki: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                 VStack{
-
-                    List(memo) { memo in
                     
+                    List(memo) { memo in
+
                         HStack {
                             Text(memo.title)
                             Spacer()

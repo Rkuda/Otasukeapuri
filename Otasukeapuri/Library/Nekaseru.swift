@@ -12,13 +12,17 @@ struct Nekaseru: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                Image("扉")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
             }
             // もどるボタン系
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "chevron.left")
+                        .foregroundColor(.white)
                         .onTapGesture {
                             dismiss()
                         }

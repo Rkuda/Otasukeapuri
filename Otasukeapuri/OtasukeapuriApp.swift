@@ -26,7 +26,6 @@ struct OtasukeapuriApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.font, Font.custom("CustomFontName", size: 20))
         }
         .modelContainer(for: Memo.self)
     }
