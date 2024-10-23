@@ -27,6 +27,7 @@ enum MemoStatus: String, Codable {
     case draft = "下書き"
     case final = "清書"
     case unused = "使わない"
+    case nekaseru = "寝かせる"
 }
 
 enum TabItem: String,CaseIterable {

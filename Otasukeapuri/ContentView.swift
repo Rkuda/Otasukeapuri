@@ -57,7 +57,7 @@ struct ContentView: View {
                     .font(.custom("HannariMincho-Regular", size: 18))
 
                     HStack(spacing: 0){
-                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("Library")) {
+                        NavigationLink(destination: Folder().navigationBarBackButtonHidden(true).navigationTitle("Library")) {
                             Image("Library4")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める

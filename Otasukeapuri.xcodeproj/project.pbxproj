@@ -20,6 +20,9 @@
 		948B8C032CC8F32100969010 /* HannariMincho-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 948B8C022CC8F32100969010 /* HannariMincho-Regular.otf */; };
 		948B8C042CC8F32100969010 /* HannariMincho-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 948B8C022CC8F32100969010 /* HannariMincho-Regular.otf */; };
 		948B8C052CC8F32100969010 /* HannariMincho-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 948B8C022CC8F32100969010 /* HannariMincho-Regular.otf */; };
+		948B8C142CC9083A00969010 /* Shitagaki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B8C132CC9083A00969010 /* Shitagaki.swift */; };
+		948B8C162CC9085100969010 /* Seisyo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B8C152CC9085100969010 /* Seisyo.swift */; };
+		948B8C182CC9086600969010 /* Tukawanai.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948B8C172CC9086600969010 /* Tukawanai.swift */; };
 		949E877C2C8C0DC500D92EA8 /* OtasukeapuriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */; };
 		949E877E2C8C0DC500D92EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E877D2C8C0DC500D92EA8 /* ContentView.swift */; };
 		949E87802C8C0DC500D92EA8 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E877F2C8C0DC500D92EA8 /* Item.swift */; };
@@ -63,6 +66,9 @@
 		948B8BF72CC8E06D00969010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		948B8BFE2CC8EDEC00969010 /* XANO-mincho-U32.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "XANO-mincho-U32.otf"; sourceTree = "<group>"; };
 		948B8C022CC8F32100969010 /* HannariMincho-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HannariMincho-Regular.otf"; sourceTree = "<group>"; };
+		948B8C132CC9083A00969010 /* Shitagaki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shitagaki.swift; sourceTree = "<group>"; };
+		948B8C152CC9085100969010 /* Seisyo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seisyo.swift; sourceTree = "<group>"; };
+		948B8C172CC9086600969010 /* Tukawanai.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tukawanai.swift; sourceTree = "<group>"; };
 		949E87782C8C0DC400D92EA8 /* Otasukeapuri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otasukeapuri.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtasukeapuriApp.swift; sourceTree = "<group>"; };
 		949E877D2C8C0DC500D92EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -143,6 +149,19 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		948B8C062CC8FD0700969010 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
+				947927D82CB428B80067B367 /* Folder.swift */,
+				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
+				948B8C132CC9083A00969010 /* Shitagaki.swift */,
+				948B8C152CC9085100969010 /* Seisyo.swift */,
+				948B8C172CC9086600969010 /* Tukawanai.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		949E876F2C8C0DC400D92EA8 = {
 			isa = PBXGroup;
 			children = (
@@ -174,9 +193,7 @@
 				949E877D2C8C0DC500D92EA8 /* ContentView.swift */,
 				94D522452CC40CA000DA38C7 /* TabView_costom.swift */,
 				94D522432CC3F8FB00DA38C7 /* TabItemView.swift */,
-				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
-				947927D82CB428B80067B367 /* Folder.swift */,
-				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
+				948B8C062CC8FD0700969010 /* Library */,
 				949E877F2C8C0DC500D92EA8 /* Item.swift */,
 				949E87812C8C0DC800D92EA8 /* Assets.xcassets */,
 				948B8BF22CC8DF3B00969010 /* Font */,
@@ -353,6 +370,7 @@
 				949E877E2C8C0DC500D92EA8 /* ContentView.swift in Sources */,
 				94D522462CC40CA000DA38C7 /* TabView_costom.swift in Sources */,
 				947927D72CB4286E0067B367 /* SubetenoMemo.swift in Sources */,
+				948B8C162CC9085100969010 /* Seisyo.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,
 				949E87802C8C0DC500D92EA8 /* Item.swift in Sources */,
 				949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */,
@@ -360,7 +378,9 @@
 				9454F0F02CA4235E001FBD22 /* Shisou2.swift in Sources */,
 				9454F0F22CA4236D001FBD22 /* Shisou3.swift in Sources */,
 				949E877C2C8C0DC500D92EA8 /* OtasukeapuriApp.swift in Sources */,
+				948B8C182CC9086600969010 /* Tukawanai.swift in Sources */,
 				947927D92CB428B80067B367 /* Folder.swift in Sources */,
+				948B8C142CC9083A00969010 /* Shitagaki.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

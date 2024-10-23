@@ -1,24 +1,19 @@
 //
-//  SubetenoMemo.swift
+//  Shitagaki.swift
 //  Otasukeapuri
 //
-//  Created by 阿部　明莉 on 2024/10/07.
+//  Created by 阿部　明莉 on 2024/10/23.
 //
 
 import SwiftUI
 import SwiftData
-//Listの背景を変更するためのもの
-extension UICollectionReusableView {
-    override open var backgroundColor: UIColor? {
-        get { .clear }
-        set { }
-    }
-}
-//Listの背景を変更するためのもの
 
-struct SubetenoMemo: View {
+
+struct Shitagaki: View {
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
+    @State private var state: MemoStatus = MemoStatus.draft
+
 
     //Listの背景を変更するためのもの
     init() {
@@ -37,12 +32,13 @@ struct SubetenoMemo: View {
                 VStack{
 
                     List(memo) { memo in
+                    
                         HStack {
                             Text(memo.title)
                             Spacer()
                             Text(memo.content)
                         }
-                        
+
                     }
                     .padding(.top,30)
 
@@ -52,6 +48,7 @@ struct SubetenoMemo: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "chevron.left")
+                            .foregroundColor(.white)
                             .onTapGesture {
                                 dismiss()
                             }
@@ -65,5 +62,5 @@ struct SubetenoMemo: View {
 }
 
 #Preview {
-    SubetenoMemo()
+    Shitagaki()
 }
