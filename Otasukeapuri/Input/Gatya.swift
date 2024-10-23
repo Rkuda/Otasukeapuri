@@ -13,14 +13,16 @@ struct Gatya: View {
     @State private var timer: Timer?
     @State private var isRolling = false
 
+
+
     var body: some View {
 
         NavigationStack{
             ZStack{
-                Color(red: 0.9, green: 0.6, blue: 0.1)
-                // 背景色
-                    .edgesIgnoringSafeArea(.all)
-                    .toolbarBackground(.white, for: .navigationBar)
+                Image("煙")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
 
                 VStack {
                     Spacer()
@@ -29,6 +31,8 @@ struct Gatya: View {
                         .scaledToFit()
                         .frame(width:UIScreen.main.bounds.width/2)
                         .padding()
+                        .foregroundColor(.white)
+
                     Spacer()
                     Button{
                         playdies()
@@ -50,6 +54,7 @@ struct Gatya: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "chevron.left")
+                        .foregroundColor(.white)
                         .onTapGesture {
                             dismiss()
                         }

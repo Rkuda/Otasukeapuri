@@ -104,6 +104,7 @@ struct ShinnkiMemo: View {
                 .padding(.all, 30)
 
                 /*
+                 戻るボタン
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "chevron.left")

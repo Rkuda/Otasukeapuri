@@ -18,31 +18,33 @@ struct Shisou: View {
 
         NavigationStack{
             ZStack{
-                Color(red: 0.9, green: 0.6, blue: 0.1)
-                // 背景色
-                    .edgesIgnoringSafeArea(.all)
-                    .toolbarBackground(.white, for: .navigationBar)
+                Image("煙")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
 
                 VStack(spacing: 0){     // V
 
                     Text("色んな思想方法を見ることができます。")
                         .font(.subheadline) //フォント→タイトル
-                        .foregroundColor(.black) // 文字色→青
-                        .padding(.all, 30) // TextViewの周りの余白を設定
-                        .background(Color(red: 1.0, green: 0.8, blue: 0.6, opacity: 0.6)) // 背景色→黄色
-                        .cornerRadius(10)
-                        .frame(width: 300,height: 100)
-                        .padding(.top, 30)
-                        .padding(.bottom, 40)
+                        .foregroundColor(.white) // 文字色
+                        .frame(width: 300,height: 80)
+                        .padding(.bottom,50)
+                        .padding(.top,50)
+
 
                     Button {
                         modalFlg1 = true
                     } label: {
-                        Image("Group 13")
-                            .resizable()
-                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 300)
-                            .padding(.bottom, 20)
+                        Text("オズボーンのチェックリスト")
+                            .font(.title3)
+                            .foregroundColor(.black)
+                            .padding(.all, 30) // TextViewの周りの余白を設定
+                            .background(.white) // 背景色→黄色
+                            .cornerRadius(20)
+                            .frame(width: 350,height: 100)
+                            .padding(.bottom, 10)
+                            .padding(.top, 100)
                     }
                     .sheet(isPresented: $modalFlg1) {
                         Shisou1()

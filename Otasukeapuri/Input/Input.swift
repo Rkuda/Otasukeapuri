@@ -9,15 +9,24 @@ import SwiftUI
 
 struct Input: View {
 
+    init() {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.clear
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+
+
+        }
+
     @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationStack{
             ZStack{
-                Color(red: 0.9, green: 0.6, blue: 0.1)
-                // 背景色
-                    .edgesIgnoringSafeArea(.all)
-                    .toolbarBackground(.white, for: .navigationBar)
+                
                 Image("煙")
                     .resizable()
                     .ignoresSafeArea()
@@ -63,20 +72,20 @@ struct Input: View {
 
                 }
 
-                // もどるボタン系
-                .navigationBarBackButtonHidden(true)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "chevron.left")
+                            .foregroundColor(.white)
                             .onTapGesture {
                                 dismiss()
                             }
                     }
                 }
-                // もどるボタン系
+
 
             }
         }
+        
     }
 }
 

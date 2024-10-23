@@ -17,6 +17,18 @@ struct ContentView: View {
     @State private var textFieldInput = ""
     // 保存のやつ
 
+    init() {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = UIColor.clear
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+
+        }
+
     var body: some View {
 
         NavigationStack{    // NavigationStackおわり
@@ -38,9 +50,12 @@ struct ContentView: View {
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 320)
                             .padding(.bottom,10)
+                            .padding(.top,20)
                     }
+                    Text("新しいアイデアをメモしましょう。")
+                        .padding(.bottom,30)
 
-                    HStack{
+                    HStack(spacing: 0){
                         NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("Library")) {
                             Image("Library4")
                                 .resizable()
