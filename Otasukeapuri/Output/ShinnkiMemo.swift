@@ -103,6 +103,7 @@ struct ShinnkiMemo: View {
                 }
                 .padding(.all, 30)
 
+                /*
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Image(systemName: "chevron.left")
@@ -111,6 +112,7 @@ struct ShinnkiMemo: View {
                             }
                     }
                 }
+                 */
             }
         }
     }

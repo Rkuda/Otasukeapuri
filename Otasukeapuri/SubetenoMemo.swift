@@ -15,28 +15,34 @@ struct SubetenoMemo: View {
     var body: some View {
 
         NavigationStack{
-            VStack{
-                List(memo) { memo in
-                    HStack {
-                        Text(memo.title)
-                        Spacer()
-                        Text(memo.content)
-                    }
-
-                }
-
-            }
-            // もどるボタン系
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image(systemName: "chevron.left")
-                        .onTapGesture {
-                            dismiss()
+            ZStack{
+                Image("宝石")
+                    .resizable()
+                    .ignoresSafeArea()
+                    .scaledToFill()
+                VStack{
+                    List(memo) { memo in
+                        HStack {
+                            Text(memo.title)
+                            Spacer()
+                            Text(memo.content)
                         }
+                        
+                    }
+                    
                 }
+                // もどるボタン系
+                .navigationBarBackButtonHidden(true)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Image(systemName: "chevron.left")
+                            .onTapGesture {
+                                dismiss()
+                            }
+                    }
+                }
+                // もどるボタン系
             }
-            // もどるボタン系
         }
     }
 
