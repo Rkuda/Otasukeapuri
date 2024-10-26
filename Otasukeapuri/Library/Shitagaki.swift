@@ -31,14 +31,12 @@ struct Shitagaki: View {
                     .scaledToFill()
                 VStack{
                     
-                    List(memo) { memo in
-
-                        HStack {
-                            Text(memo.title)
-                            Spacer()
-                            Text(memo.content)
-                        }
-
+                    List(memo.filter { $0.state == .draft }) { memo in
+                      HStack {
+                        Text(memo.title)
+                        Spacer()
+                        Text(memo.content)
+                      }
                     }
                     .padding(.top,30)
 
