@@ -61,4 +61,5 @@ struct Shitagaki: View {
 
 #Preview {
     Shitagaki()
+        
 }

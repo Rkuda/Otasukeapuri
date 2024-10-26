@@ -71,4 +71,5 @@ struct SubetenoMemo: View {
 
 #Preview {
     SubetenoMemo()
+        .modelContainer(for: Memo.self)
 }

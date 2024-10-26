@@ -58,4 +58,5 @@ struct Seisyo: View {
 
 #Preview {
     Seisyo()
+        
 }

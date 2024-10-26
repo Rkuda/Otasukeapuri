@@ -13,7 +13,7 @@ struct Folder: View {
     @Query private var memo: [Memo]
     @State private var inputTitle = ""
     @State private var inputContent = ""
-    @State private var state: MemoStatus = MemoStatus.draft
+    
 
 
     var body: some View {
@@ -93,4 +93,5 @@ struct Folder: View {
 
 #Preview {
     Folder()
+        .modelContainer(for: Memo.self)
 }

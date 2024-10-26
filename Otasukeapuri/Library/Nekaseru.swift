@@ -50,4 +50,5 @@ struct Nekaseru: View {
 
 #Preview {
     Nekaseru()
+       
 }
