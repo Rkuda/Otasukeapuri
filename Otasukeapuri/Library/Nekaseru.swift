@@ -6,9 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct Nekaseru: View {
     @Environment(\.dismiss) var dismiss
+    @Query private var memo: [Memo]
+
+    //Listの背景を変更するためのもの
+    init() {
+            UICollectionView.appearance().backgroundColor = .clear
+    }
+    //Listの背景を変更するためのもの
+
+
     var body: some View {
         NavigationStack{
             ZStack{
@@ -25,7 +35,16 @@ struct Nekaseru: View {
 
                         .padding(.top,90)
 
-                    Spacer()
+                    List(memo) { memo in
+
+                        HStack {
+                            Text(memo.title)
+                            Spacer()
+                            Text(memo.content)
+                        }
+
+                    }
+                    
 
 
 
@@ -50,5 +69,5 @@ struct Nekaseru: View {
 
 #Preview {
     Nekaseru()
-       
+        .modelContainer(for: Memo.self)
 }

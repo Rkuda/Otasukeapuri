@@ -37,16 +37,20 @@ struct SubetenoMemo: View {
                     .scaledToFill()
                 VStack{
                 
-                    List(memo) { memo in
+                    List{
+                    ForEach(memo, id: \.self) { memo in
 
                         HStack {
                             Text(memo.title)
                             Spacer()
                             Text(memo.content)
                         }
+                    }
+                    .onDelete(perform: onDelete)
 
                     }
                     .padding(.top,30)
+
 
                 }
                 // もどるボタン系
@@ -65,6 +69,9 @@ struct SubetenoMemo: View {
         }
     }
 
+    private func onDelete(from source: IndexSet) {
+
+      }
 
 
 }

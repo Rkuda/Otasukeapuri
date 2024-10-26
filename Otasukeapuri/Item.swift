@@ -9,11 +9,12 @@ import Foundation
 import SwiftData
 
 @Model
-final class Memo: Identifiable {
+final class Memo: ObservableObject, Identifiable {
     var id = UUID()
     var title: String
     var content: String
     var state: MemoStatus
+
 
     init(title: String, content: String,state: MemoStatus) {
         self.title = title
@@ -23,12 +24,16 @@ final class Memo: Identifiable {
     }
 }
 
-enum MemoStatus: String, Codable {
+enum MemoStatus: String, Codable, Identifiable, CaseIterable {
     case draft = "下書き"
     case final = "清書"
     case unused = "使わない"
     case nekaseru = "寝かせる"
+
+    var id: String { self.rawValue }
 }
+
+
 
 enum TabItem: String,CaseIterable {
     case memo

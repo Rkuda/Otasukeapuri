@@ -12,7 +12,7 @@ struct Seisyo: View {
 
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
-    @State private var state: MemoStatus = MemoStatus.final
+    
     
     //Listの背景を変更するためのもの
     init() {

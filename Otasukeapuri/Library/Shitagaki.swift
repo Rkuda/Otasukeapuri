@@ -12,7 +12,7 @@ import SwiftData
 struct Shitagaki: View {
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
-    @State private var state: MemoStatus = MemoStatus.draft
+   
 
 
     //Listの背景を変更するためのもの
@@ -61,5 +61,5 @@ struct Shitagaki: View {
 
 #Preview {
     Shitagaki()
-        
+       
 }

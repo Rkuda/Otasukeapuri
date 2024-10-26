@@ -12,7 +12,7 @@ struct Tukawanai: View {
 
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
-    @State private var state: MemoStatus = MemoStatus.unused
+    
 
     //Listの背景を変更するためのもの
     init() {
@@ -58,5 +58,5 @@ struct Tukawanai: View {
 
 #Preview {
     Tukawanai()
-        .modelContainer(for: Memo.self)
+        
 }
