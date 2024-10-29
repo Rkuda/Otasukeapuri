@@ -17,6 +17,7 @@ struct ShinnkiMemo: View {
     @State private var inputTitle = ""
     @State private var inputContent = ""
     @State private var state: MemoStatus = MemoStatus.draft
+    
 
     private func add() {
         let data = Memo(title: inputTitle, content: inputContent, state: state)

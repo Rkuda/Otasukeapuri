@@ -57,6 +57,5 @@ struct Tukawanai: View {
 }
 
 #Preview {
-    Tukawanai()
-        
+    Tukawanai()        
 }

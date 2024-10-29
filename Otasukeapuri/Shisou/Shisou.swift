@@ -48,33 +48,7 @@ struct Shisou: View {
                     }
                     .sheet(isPresented: $modalFlg1) {
                         Shisou1()
-                    }
-
-                    Button {
-                        modalFlg2 = true
-                    } label: {
-                        Image("Group 14")
-                            .resizable()
-                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 300)
-                            .padding(.bottom, 20)
-                    }
-                    .sheet(isPresented: $modalFlg2) {
-                        Shisou2()
-                    }
-
-                    Button {
-                        modalFlg3 = true
-                    } label: {
-                        Image("Group 15")
-                            .resizable()
-                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 300)
-                            .padding(.bottom, 30)
-                    }
-                    .sheet(isPresented: $modalFlg3) {
-                        Shisou3()
-                    }
+                    }                    
 
                     Spacer()
 

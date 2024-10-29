@@ -14,10 +14,9 @@ struct Nekaseru: View {
 
     //Listの背景を変更するためのもの
     init() {
-            UICollectionView.appearance().backgroundColor = .clear
+        UICollectionView.appearance().backgroundColor = .clear
     }
     //Listの背景を変更するためのもの
-
 
     var body: some View {
         NavigationStack{
@@ -36,17 +35,13 @@ struct Nekaseru: View {
                         .padding(.top,90)
 
                     List(memo.filter { $0.state == .nekaseru }) { memo in
-                      HStack {
-                        Text(memo.title)
-                        Spacer()
-                        Text(memo.content)
-                      }
+                        HStack {
+                            Text(memo.title)
+                            Spacer()
+                            Text(memo.content)
+                        }
                     }
                     .padding(.top,30)
-
-
-
-
                 }
 
             }
@@ -68,5 +63,5 @@ struct Nekaseru: View {
 
 #Preview {
     Nekaseru()
-        .modelContainer(for: Memo.self)
+
 }

@@ -10,6 +10,7 @@ import SwiftData
 
 struct Folder: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) private var context
     @Query private var memo: [Memo]
     @State private var inputTitle = ""
     @State private var inputContent = ""

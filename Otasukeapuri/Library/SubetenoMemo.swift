@@ -19,6 +19,8 @@ extension UICollectionReusableView {
 struct SubetenoMemo: View {
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
+    @Environment(\.modelContext) private var modelContext
+    
 
 
     //Listの背景を変更するためのもの

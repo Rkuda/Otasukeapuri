@@ -57,6 +57,5 @@ struct Seisyo: View {
 }
 
 #Preview {
-    Seisyo()
-        
+    Seisyo()        
 }
