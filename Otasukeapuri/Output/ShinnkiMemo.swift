@@ -63,6 +63,9 @@ struct ShinnkiMemo: View {
                             Button("使わない"){
                                 state = MemoStatus.unused
                             }
+                            Button("寝かせる"){
+                                state = MemoStatus.nekaseru
+                            }
                         }
                         .menuStyle(.button)
                         .foregroundColor(.black)
