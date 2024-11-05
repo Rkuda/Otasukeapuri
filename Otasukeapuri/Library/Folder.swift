@@ -26,51 +26,68 @@ struct Folder: View {
                     .scaledToFill()
 
                 VStack{
-                    NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
-                        Text("すべてのメモ")
-                            .font(.custom("HannariMincho-Regular", size: 30))
-                            .foregroundColor(.black)
-                            .padding(.all, 30) // TextViewの周りの余白を設定
-                            .background(.white) // 背景色→黄色
-                            .cornerRadius(20)
-                            .frame(width: 300,height: 60)
-                            .padding(.bottom, 50)
-                            .padding(.top, 120)
 
-                            }
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white)
+                            .frame(width: 280, height: 80)
+                            .padding(.top, 20)
 
-                    NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("下書き")) {
-                        Text("下書き")
-                            .font(.custom("HannariMincho-Regular", size: 30))
-                            .foregroundColor(.black)
-                            .padding(.all, 30) // TextViewの周りの余白を設定
-                            .background(.white) // 背景色→黄色
-                            .cornerRadius(20)
-                            .frame(width: 300,height: 60)
-                            .padding(.bottom, 50)
+                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
+                            Text("すべてのメモ")
+                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .foregroundColor(.black)
+                                .padding(.top)
+                        }
+
+                    }.padding(.top,80)
+
+
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white)
+                            .frame(width: 280, height: 80)
+                            .padding(.top, 20)
+
+                        NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("下書き")) {
+                            Text("下書き")
+                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .foregroundColor(.black)
+                                .padding(.top)
+                        }
+
                     }
 
-                    NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")) {
-                        Text("清書")
-                            .font(.custom("HannariMincho-Regular", size: 30))
-                            .foregroundColor(.black)
-                            .padding(.all, 30) // TextViewの周りの余白を設定
-                            .background(.white) // 背景色→黄色
-                            .cornerRadius(20)
-                            .frame(width: 300,height: 60)
-                            .padding(.bottom, 50)
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white)
+                            .frame(width: 280, height: 80)
+                            .padding(.top, 20)
+
+                        NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")) {
+                            Text("清書")
+                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .foregroundColor(.black)
+                                .padding(.top)
+                        }
+
                     }
 
-                    NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("あんまり")) {
-                        Text("あんまり")
-                            .font(.custom("HannariMincho-Regular", size: 30))
-                            .foregroundColor(.black)
-                            .padding(.all, 30) // TextViewの周りの余白を設定
-                            .background(.white) // 背景色→黄色
-                            .cornerRadius(20)
-                            .frame(width: 300,height: 60)
-                            .padding(.bottom, 10)
-                           }
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white)
+                            .frame(width: 280, height: 80)
+                            .padding(.top, 20)
+
+                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("あんまり")) {
+                            Text("あんまり")
+                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .foregroundColor(.black)
+                                .padding(.top)
+                        }
+
+                    }
+
                     Spacer()
 
                 }
