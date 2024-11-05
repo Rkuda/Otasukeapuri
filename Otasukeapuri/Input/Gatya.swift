@@ -9,10 +9,16 @@ import SwiftUI
 
 struct Gatya: View {
     @Environment(\.dismiss) var dismiss
-    @State private var randomNumber = 1
     @State private var timer: Timer?
     @State private var isRolling = false
+    @State private var selectedfirstWord: String = "世界一"
+    @State private var selectedsecondword: String = "可愛らしい"
+    @State private var selectedthirdword: String = "ロボット"
 
+    // ワードのリスト
+    let firstwords = ["世界一", "過去最高に", "何よりも", "とんでもなく", "歴史に残る"]
+    let secondwords = ["卑怯な", "卑猥な", "強烈な", "可愛らしい", "弱々しい"]
+    let thirdwords = ["ロボット", "お箸", "貯金箱", "書物", "サービス"]
 
 
     var body: some View {
@@ -25,26 +31,42 @@ struct Gatya: View {
                     .scaledToFill()
 
                 VStack {
-                    Spacer()
-                    Image(systemName: "die.face.\(randomNumber)")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width:UIScreen.main.bounds.width/2)
-                        .padding()
+                    // 選ばれたワードを表示
+                    Text(selectedfirstWord)
+                        .font(.largeTitle)
                         .foregroundColor(.white)
+                        .padding()
+                    Text(selectedsecondword)
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding()
+                    Text(selectedthirdword)
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                        .padding()
 
-                    Spacer()
-                    Button{
-                        playdies()
-                    } label: {
-                        Text("サイコロを振る")
+                    // スロットを回すボタン
+                    Button(action: {
+                        isRolling = true
+                        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                        // ランダムにワードを選ぶ
+                        selectedfirstWord = firstwords.randomElement() ?? ""
+                        selectedsecondword = secondwords.randomElement() ?? ""
+                        selectedthirdword = thirdwords.randomElement() ?? ""
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            timer?.invalidate()
+                            timer = nil
+                            isRolling = false
+                        }
+                    }) {
+                        Text("スロットを回す")
+                            .font(.title)
                             .padding()
-                            .background(Color.white)
-                            .foregroundColor(.black)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
                             .cornerRadius(10)
-                    }
-                    .disabled(isRolling)
-                    Spacer()
+                    }.disabled(isRolling)
                 }
                 .padding()
             }
@@ -64,19 +86,7 @@ struct Gatya: View {
         }
     }
 
-    private func playdies() {
-        print("ボタンが押されたよ。")
-        isRolling = true
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            randomNumber = Int.random(in: 1...6)
-        }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-            timer?.invalidate()
-            timer = nil
-            isRolling = false
-        }
-    }
 }
 
 #Preview {
