@@ -21,8 +21,6 @@ struct SubetenoMemo: View {
     @Query private var memo: [Memo]
     @Environment(\.modelContext) private var modelContext
     
-
-
     //Listの背景を変更するためのもの
     init() {
             UICollectionView.appearance().backgroundColor = .clear

@@ -37,6 +37,7 @@ struct Folder: View {
                             Text("すべてのメモ")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
+                                .frame(width: 280, height: 80)
                                 .padding(.top)
                         }
 
@@ -53,6 +54,7 @@ struct Folder: View {
                             Text("下書き")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
+                                .frame(width: 280, height: 80)
                                 .padding(.top)
                         }
 
@@ -68,6 +70,7 @@ struct Folder: View {
                             Text("清書")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
+                                .frame(width: 280, height: 80)
                                 .padding(.top)
                         }
 
@@ -83,6 +86,7 @@ struct Folder: View {
                             Text("あんまり")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
+                                .frame(width: 280, height: 80)
                                 .padding(.top)
                         }
 

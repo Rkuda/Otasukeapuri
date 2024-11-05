@@ -11,6 +11,7 @@ import SwiftData
 struct Seisyo: View {
 
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) private var context
     @Query private var memo: [Memo]
     
     

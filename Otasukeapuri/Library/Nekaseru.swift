@@ -11,6 +11,7 @@ import SwiftData
 struct Nekaseru: View {
     @Environment(\.dismiss) var dismiss
     @Query private var memo: [Memo]
+    @Environment(\.modelContext) private var context
 
     //Listの背景を変更するためのもの
     init() {
