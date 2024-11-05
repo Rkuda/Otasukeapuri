@@ -34,18 +34,22 @@ struct Input: View {
 
                 VStack(spacing: 0){
 
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white)
+                            .frame(width: 280, height: 80)
+                            .padding(.top, 20)
 
-                    NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")) {
-                        Text("ワードガチャ")
-                            .font(.custom("HannariMincho-Regular", size: 30))
-                            .foregroundColor(.black)
-                            .padding(.all, 30) // TextViewの周りの余白を設定
-                            .background(.white) // 背景色→黄色
-                            .cornerRadius(20)
-                            .frame(width: 300,height: 100)
-                            .padding(.bottom, 10)
-                            .padding(.top, 100)
-                    }
+                        NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")) {
+                            Text("ワードガチャ")
+                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .foregroundColor(.black)
+                                .frame(width: 280, height: 80)
+                                .padding(.top)
+                        }
+
+                    }.padding(.top,90)
+
                     Text("アイデア出しに息づまった時に使って欲しい機能です。ゲーム感覚で触ってみましょう！")
 
                         .font(.custom("HannariMincho-Regular", size: 15))
@@ -54,17 +58,22 @@ struct Input: View {
                         .frame(width: 250,height: 100)
                         .padding(.bottom,50)
 
-                    NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("教えて先輩")) {
-                        Text("思考方法")
-                            .font(.custom("HannariMincho-Regular", size: 30))
-                            .foregroundColor(.black)
-                            .padding(.all, 30) // TextViewの周りの余白を設定
-                            .background(.white) // 背景色→黄色
-                            .cornerRadius(20)
-                            .frame(width: 300,height: 100)
-                            .padding(.bottom, 10)
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(.white)
+                            .frame(width: 280, height: 80)
+                            .padding(.top, 20)
+
+                        NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("思考方法")) {
+                            Text("思考方法")
+                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .foregroundColor(.black)
+                                .frame(width: 280, height: 80)
+                                .padding(.top)
+                        }
 
                     }
+
                     Text("アイデアが出やすくなる色んな思考法や頭の体操をする場所です。")
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .lineSpacing(12)
