@@ -13,11 +13,11 @@ struct Seisyo: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var context
     @Query private var memo: [Memo]
-    
-    
+
+
     //Listの背景を変更するためのもの
     init() {
-            UICollectionView.appearance().backgroundColor = .clear
+        UICollectionView.appearance().backgroundColor = .clear
     }
     //Listの背景を変更するためのもの
 
@@ -30,15 +30,17 @@ struct Seisyo: View {
                     .scaledToFill()
                 VStack{
 
-                    List(memo.filter { $0.state == .final }) { memo in
-                      HStack {
-                        Text(memo.title)
-                        Spacer()
-                        Text(memo.content)
-                      }
+                    List {
+                        ForEach(memo.filter { $0.state == .final }) { memo in
+                            Text(memo.title)
+                                .font(.custom("HannariMincho-Regular", size: 25))
+                                .padding(.top,10)
+                            Text(memo.content)
+                                .font(.custom("HannariMincho-Regular", size: 18))
+                                .padding(.bottom,20)
+                        }
                     }
                     .padding(.top,30)
-
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)

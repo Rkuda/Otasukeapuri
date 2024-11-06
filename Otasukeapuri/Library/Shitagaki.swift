@@ -14,7 +14,7 @@ struct Shitagaki: View {
     @Environment(\.modelContext) private var context
     @Query private var memo: [Memo]
     // フィルタリングされたメモリストを管理するプロパティ
-        @State private var filteredMemos: [Memo] = []
+    @State private var filteredMemos: [Memo] = []
 
 
 
@@ -36,26 +36,15 @@ struct Shitagaki: View {
 
                     List {
                         ForEach(memo.filter { $0.state == .draft }) { memo in
-
                             Text(memo.title)
                                 .font(.custom("HannariMincho-Regular", size: 25))
                                 .padding(.top,10)
-
-
-
                             Text(memo.content)
                                 .font(.custom("HannariMincho-Regular", size: 18))
                                 .padding(.bottom,20)
-
-
-
                         }
-
-
                     }
                     .padding(.top,30)
-                    
-
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)
