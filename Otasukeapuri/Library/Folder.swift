@@ -129,7 +129,7 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("データ管理")) {
+                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("")) {
                             HStack{
                                 Spacer().frame(width: 60)
                                 Text("データ管理")
