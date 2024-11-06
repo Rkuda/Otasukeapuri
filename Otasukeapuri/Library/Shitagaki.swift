@@ -13,12 +13,14 @@ struct Shitagaki: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var context
     @Query private var memo: [Memo]
-   
+    // フィルタリングされたメモリストを管理するプロパティ
+        @State private var filteredMemos: [Memo] = []
+
 
 
     //Listの背景を変更するためのもの
     init() {
-            UICollectionView.appearance().backgroundColor = .clear
+        UICollectionView.appearance().backgroundColor = .clear
     }
     //Listの背景を変更するためのもの
 
@@ -31,15 +33,28 @@ struct Shitagaki: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                 VStack{
-                    
-                    List(memo.filter { $0.state == .draft }) { memo in
-                      HStack {
-                        Text(memo.title)
-                        Spacer()
-                        Text(memo.content)
-                      }
+
+                    List {
+                        ForEach(memo.filter { $0.state == .draft }) { memo in
+
+                            Text(memo.title)
+                                .font(.custom("HannariMincho-Regular", size: 25))
+                                .padding(.top,10)
+
+
+
+                            Text(memo.content)
+                                .font(.custom("HannariMincho-Regular", size: 18))
+                                .padding(.bottom,20)
+
+
+
+                        }
+
+
                     }
                     .padding(.top,30)
+                    
 
                 }
                 // もどるボタン系
@@ -54,12 +69,15 @@ struct Shitagaki: View {
                     }
                 }
                 // もどるボタン系
-            }
-        }
-    }
+            }     //Z
+        }    //N
+    }    //body
+
+
 
 }
 
 #Preview {
-    Shitagaki()    
+    Shitagaki()
+        .modelContainer(for: Memo.self)
 }

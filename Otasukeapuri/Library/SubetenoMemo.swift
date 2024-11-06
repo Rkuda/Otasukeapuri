@@ -17,15 +17,19 @@ extension UICollectionReusableView {
 //Listの背景を変更するためのもの
 
 struct SubetenoMemo: View {
-    @Environment(\.dismiss) var dismiss
+
     @Query private var memo: [Memo]
+    @Environment(\.dismiss) var dismiss
     @Environment(\.modelContext) private var modelContext
-    
+
+
     //Listの背景を変更するためのもの
     init() {
-            UICollectionView.appearance().backgroundColor = .clear
+        UICollectionView.appearance().backgroundColor = .clear
+        UITableView.appearance().separatorColor = .black
     }
     //Listの背景を変更するためのもの
+
 
     var body: some View {
 
@@ -36,23 +40,32 @@ struct SubetenoMemo: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                 VStack{
-                
+
                     List{
-                    ForEach(memo, id: \.self) { memo in
+                        ForEach(memo, id: \.self) { memo in
 
-                        HStack {
+
+
                             Text(memo.title)
-                            Spacer()
+                                .font(.custom("HannariMincho-Regular", size: 25))
+                                .padding(.top,10)
+
+
+
                             Text(memo.content)
+                                .font(.custom("HannariMincho-Regular", size: 18))
+                                .padding(.bottom,20)
+
+
+
                         }
+                        .onDelete(perform: deleteItems)
+
+
                     }
-                    .onDelete(perform: onDelete)
-
-                    }
-                    .padding(.top,30)
-
-
                 }
+                .padding(.top,50)
+
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)
                 .toolbar {
@@ -69,14 +82,20 @@ struct SubetenoMemo: View {
         }
     }
 
-    private func onDelete(from source: IndexSet) {
 
-      }
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            for index in offsets {
+                // 削除する
+                modelContext.delete(memo[index])
+            }
+        }
 
-
+    }
 }
 
 #Preview {
     SubetenoMemo()
         .modelContainer(for: Memo.self)
 }
+

@@ -58,5 +58,6 @@ struct Seisyo: View {
 }
 
 #Preview {
-    Seisyo()        
+    Seisyo()
+        .modelContainer(for: Memo.self)
 }

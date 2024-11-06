@@ -58,5 +58,6 @@ struct Tukawanai: View {
 }
 
 #Preview {
-    Tukawanai()        
+    Tukawanai()
+        .modelContainer(for: Memo.self)
 }

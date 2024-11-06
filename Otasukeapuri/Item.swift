@@ -10,6 +10,7 @@ import SwiftData
 
 @Model
 final class Memo: Identifiable, ObservableObject {
+    
     var id = UUID()
     var title: String
     var content: String
