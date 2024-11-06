@@ -55,7 +55,7 @@ struct Input: View {
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .lineSpacing(12)
                         .foregroundColor(.white) // 文字色
-                        .frame(width: 250,height: 100)
+                        .frame(width: 250,height: 130)
                         .padding(.bottom,50)
 
                     ZStack{
