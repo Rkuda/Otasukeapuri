@@ -30,15 +30,22 @@ struct Folder: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
-                            .frame(width: 280, height: 80)
+                            .frame(width: 330, height: 80)
                             .padding(.top, 20)
-
-                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
-                            Text("すべてのメモ")
-                                .font(.custom("HannariMincho-Regular", size: 30))
+                        HStack{
+                            Spacer().frame(width: 45)
+                            NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("すべてのメモ")) {
+                                Text("すべてのメモ")
+                                    .font(.custom("HannariMincho-Regular", size: 30))
+                                    .foregroundColor(.black)
+                                    .padding(.top)
+                            }.padding()
+                            Spacer()
+                            Image(systemName: "chevron.right")
                                 .foregroundColor(.black)
-                                .frame(width: 280, height: 80)
-                                .padding(.top)
+                                .padding(.top,20)
+                                .padding()
+                            Spacer().frame(width: 40)
                         }
 
                     }.padding(.top,80)
@@ -47,15 +54,22 @@ struct Folder: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
-                            .frame(width: 280, height: 80)
+                            .frame(width: 330, height: 80)
                             .padding(.top, 20)
-
-                        NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("下書き")) {
-                            Text("下書き")
-                                .font(.custom("HannariMincho-Regular", size: 30))
+                        HStack{
+                            Spacer().frame(width: 45)
+                            NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("下書き")) {
+                                Text("下書き")
+                                    .font(.custom("HannariMincho-Regular", size: 30))
+                                    .foregroundColor(.black)
+                                    .padding(.top)
+                            }.padding()
+                            Spacer()
+                            Image(systemName: "chevron.right")
                                 .foregroundColor(.black)
-                                .frame(width: 280, height: 80)
-                                .padding(.top)
+                                .padding(.top,20)
+                                .padding()
+                            Spacer().frame(width: 40)
                         }
 
                     }
@@ -63,37 +77,49 @@ struct Folder: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
-                            .frame(width: 280, height: 80)
+                            .frame(width:330, height: 80)
                             .padding(.top, 20)
-
-                        NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")) {
-                            Text("清書")
-                                .font(.custom("HannariMincho-Regular", size: 30))
+                        HStack{
+                            Spacer().frame(width: 45)
+                            NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")) {
+                                Text("清書")
+                                    .font(.custom("HannariMincho-Regular", size: 30))
+                                    .foregroundColor(.black)
+                                    .padding(.top)
+                            }.padding()
+                            Spacer()
+                            Image(systemName: "chevron.right")
                                 .foregroundColor(.black)
-                                .frame(width: 280, height: 80)
-                                .padding(.top)
+                                .padding(.top,20)
+                                .padding()
+                            Spacer().frame(width: 40)
                         }
-
                     }
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
-                            .frame(width: 280, height: 80)
+                            .frame(width: 330, height: 80)
                             .padding(.top, 20)
-
-                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("あんまり")) {
-                            Text("あんまり")
-                                .font(.custom("HannariMincho-Regular", size: 30))
+                        HStack{
+                            Spacer().frame(width: 45)
+                            NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("使わない")) {
+                                Text("使わない")
+                                    .font(.custom("HannariMincho-Regular", size: 30))
+                                    .foregroundColor(.black)
+                                    .padding(.top)
+                            }.padding()
+                            Spacer()
+                            Image(systemName: "chevron.right")
                                 .foregroundColor(.black)
-                                .frame(width: 280, height: 80)
-                                .padding(.top)
+                                .padding(.top,20)
+                                .padding()
+                            Spacer().frame(width: 40)
                         }
 
                     }
 
                     Spacer()
-
                 }
 
             }
