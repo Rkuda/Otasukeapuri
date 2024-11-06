@@ -16,6 +16,13 @@ struct Nekaseru: View {
     //Listの背景を変更するためのもの
     init() {
         UICollectionView.appearance().backgroundColor = .clear
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     //Listの背景を変更するためのもの
 
@@ -28,12 +35,17 @@ struct Nekaseru: View {
                     .scaledToFill()
 
                 VStack{
+
+                    Image("Leavetitle")
+                        .resizable()
+                        .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                        .frame(width: 150)
+                        .padding(.bottom,10)
+
                     Text("ここは思い悩んだアイデアと一旦距離を取るための場所です。一定期間時間アイデアを寝かせた後にもう一度アイデアを見た時、あなたがどのように感じるでしょうか。")
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300,height: 100)
-
-                        .padding(.top,90)
 
                     List(memo.filter { $0.state == .nekaseru }) { memo in
                         
@@ -45,8 +57,8 @@ struct Nekaseru: View {
                             .padding(.bottom,20)
 
                     }
-                    .padding(.top,30)
-                }
+                   
+                }.padding(.top,60)
 
             }
             // もどるボタン系

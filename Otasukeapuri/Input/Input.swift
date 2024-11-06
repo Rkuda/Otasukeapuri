@@ -34,13 +34,19 @@ struct Input: View {
 
                 VStack(spacing: 0){
 
+                    Image("Leavetitle")
+                        .resizable()
+                        .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                        .frame(width: 150)
+                        .padding(.bottom,50)
+
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
                             .frame(width: 280, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")) {
+                        NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("")) {
                             Text("ワードガチャ")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
@@ -48,7 +54,7 @@ struct Input: View {
                                 .padding(.top)
                         }
 
-                    }.padding(.top,90)
+                    }
 
                     Text("アイデア出しに息づまった時に使って欲しい機能です。ゲーム感覚で触ってみましょう！")
 
@@ -64,7 +70,7 @@ struct Input: View {
                             .frame(width: 280, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("思考方法")) {
+                        NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("")) {
                             Text("思考方法")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
@@ -87,7 +93,7 @@ struct Input: View {
 
 
 
-                }
+                }.padding(.top,30)
 
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {

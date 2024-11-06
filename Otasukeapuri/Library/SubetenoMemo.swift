@@ -41,6 +41,11 @@ struct SubetenoMemo: View {
                     .scaledToFill()
                 VStack{
 
+                    Text("データの管理を行う場所です。必要が無くなったデータはスライドして削除できます。")
+                        .font(.custom("HannariMincho-Regular", size: 15))
+                        .foregroundColor(.white) // 文字色
+                        .frame(width: 300)
+
                     List{
                         ForEach(memo, id: \.self) { memo in
 
@@ -64,7 +69,8 @@ struct SubetenoMemo: View {
 
                     }
                 }
-                .padding(.top,50)
+                .padding(.top,80)
+                .padding(.bottom,50)
 
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)

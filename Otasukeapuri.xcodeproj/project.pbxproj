@@ -152,8 +152,8 @@
 		948B8C062CC8FD0700969010 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
 				947927D82CB428B80067B367 /* Folder.swift */,
+				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
 				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
 				948B8C132CC9083A00969010 /* Shitagaki.swift */,
 				948B8C152CC9085100969010 /* Seisyo.swift */,

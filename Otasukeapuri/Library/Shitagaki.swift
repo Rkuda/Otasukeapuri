@@ -16,11 +16,16 @@ struct Shitagaki: View {
     // フィルタリングされたメモリストを管理するプロパティ
     @State private var filteredMemos: [Memo] = []
 
-
-
     //Listの背景を変更するためのもの
     init() {
         UICollectionView.appearance().backgroundColor = .clear
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
     //Listの背景を変更するためのもの
 
@@ -44,7 +49,8 @@ struct Shitagaki: View {
                                 .padding(.bottom,20)
                         }
                     }
-                    .padding(.top,30)
+                    .padding(.top,50)
+                    .padding(.bottom,50)
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)
