@@ -25,6 +25,11 @@ struct Shisou: View {
 
                 VStack(spacing: 0){     // V
 
+                    Text("思考方法")
+                        .font(.headline)
+                        .foregroundColor(.white) // 文字色
+                        .padding(.top,10)
+
                     Text("色んな思想方法を見ることができます。")
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .foregroundColor(.white) // 文字色
@@ -48,7 +53,41 @@ struct Shisou: View {
                     }
                     .sheet(isPresented: $modalFlg1) {
                         Shisou1()
-                    }                    
+                    }
+
+                    Button {
+                        modalFlg2 = true
+                    } label: {
+                        Text("オズボーンのチェックリスト")
+                            .font(.custom("HannariMincho-Regular", size: 20))
+                            .foregroundColor(.black)
+                            .padding(.all, 30) // TextViewの周りの余白を設定
+                            .background(.white) // 背景色→黄色
+                            .cornerRadius(20)
+                            .frame(width: 350,height: 100)
+                            .padding(.bottom, 10)
+                            .padding(.top, 30)
+                    }
+                    .sheet(isPresented: $modalFlg2) {
+                        Shisou2()
+                    }
+
+                    Button {
+                        modalFlg3 = true
+                    } label: {
+                        Text("オズボーンのチェックリスト")
+                            .font(.custom("HannariMincho-Regular", size: 20))
+                            .foregroundColor(.black)
+                            .padding(.all, 30) // TextViewの周りの余白を設定
+                            .background(.white) // 背景色→黄色
+                            .cornerRadius(20)
+                            .frame(width: 350,height: 100)
+                            .padding(.bottom, 10)
+                            .padding(.top, 30)
+                    }
+                    .sheet(isPresented: $modalFlg3) {
+                        Shisou3()
+                    }
 
                     Spacer()
 
