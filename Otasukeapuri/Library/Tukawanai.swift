@@ -37,6 +37,11 @@ struct Tukawanai: View {
                     .scaledToFill()
                 VStack{
 
+                    Text("使わない")
+                        .font(.headline)
+                        .foregroundColor(.white) // 文字色
+                        .padding(.top,28)
+
                     List {
                         ForEach(memo.filter { $0.state == .unused }) { memo in
                             Text(memo.title)
@@ -47,7 +52,6 @@ struct Tukawanai: View {
                                 .padding(.bottom,20)
                         }
                     }
-                    .padding(.top,50)
                     .padding(.bottom,50)
                 }
                 // もどるボタン系

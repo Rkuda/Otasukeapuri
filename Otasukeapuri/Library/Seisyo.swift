@@ -37,6 +37,11 @@ struct Seisyo: View {
                     .scaledToFill()
                 VStack{
 
+                    Text("清書")
+                        .font(.headline)
+                        .foregroundColor(.white) // 文字色
+                        .padding(.top,28)
+
                     List {
                         ForEach(memo.filter { $0.state == .final }) { memo in
                             Text(memo.title)
@@ -47,8 +52,7 @@ struct Seisyo: View {
                                 .padding(.bottom,20)
                         }
                     }
-                    .padding(.top,50)
-                    .padding(.bottom,50)
+                   .padding(.bottom,50)
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)

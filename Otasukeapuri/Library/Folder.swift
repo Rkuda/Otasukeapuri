@@ -54,7 +54,7 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("下書き")) {
+                        NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("")) {
                             HStack{
                                 Spacer().frame(width: 55)
                                 Text("下書き")
@@ -79,7 +79,7 @@ struct Folder: View {
                             .frame(width:330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")) {
+                        NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("")) {
                             HStack{
                                 Spacer().frame(width: 60)
                                 Text("清書")
@@ -103,7 +103,7 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("使わない")) {
+                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("")) {
                             HStack{
                                 Spacer().frame(width: 60)
                                 Text("使わない")

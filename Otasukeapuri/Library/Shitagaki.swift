@@ -39,6 +39,12 @@ struct Shitagaki: View {
                     .scaledToFill()
                 VStack{
 
+                    Text("下書き")
+                        .font(.headline)
+                        .foregroundColor(.white) // 文字色
+                        .padding(.top,28)
+
+
                     List {
                         ForEach(memo.filter { $0.state == .draft }) { memo in
                             Text(memo.title)
@@ -49,7 +55,6 @@ struct Shitagaki: View {
                                 .padding(.bottom,20)
                         }
                     }
-                    .padding(.top,50)
                     .padding(.bottom,50)
                 }
                 // もどるボタン系
