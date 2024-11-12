@@ -51,7 +51,6 @@ struct SubetenoMemo: View {
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300)
                         .padding(.top,30)
-
                     List{
                         ForEach(memo, id: \.self) { memo in
 

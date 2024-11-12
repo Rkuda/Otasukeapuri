@@ -34,7 +34,7 @@ struct Input: View {
 
                 VStack(spacing: 0){
 
-                    Image("Leavetitle")
+                    Image("Hinttitle")
                         .resizable()
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
