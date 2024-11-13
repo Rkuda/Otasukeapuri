@@ -20,7 +20,6 @@ struct Folder: View {
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor.clear
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
@@ -40,6 +39,7 @@ struct Folder: View {
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
                         .padding(.bottom,30)
+                        .padding(.top,20)
 
                     Text("メモを残す際に選んだファイルごとにアイデアを振り返ることができます。データの削除をする際はデータ管理フォルダで行ってください。その他のフォルダは閲覧のみを行うことができます。")
                         .font(.custom("HannariMincho-Regular", size: 15))
@@ -54,9 +54,10 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                        NavigationLink(destination: Shitagaki().navigationBarBackButtonHidden(true).navigationTitle("下書き")
+                            .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 55)
+                                Spacer().frame(width: 70)
                                 Text("下書き")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
@@ -67,9 +68,10 @@ struct Folder: View {
                                     .foregroundColor(.black)
                                     .padding(.top,20)
                                     .padding()
-                                Spacer().frame(width: 40)
+                                Spacer().frame(width: 55)
                             }
                         }
+                        
 
                     }
 
@@ -79,9 +81,10 @@ struct Folder: View {
                             .frame(width:330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                        NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")
+                            .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 60)
+                                Spacer().frame(width: 70)
                                 Text("清書")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
@@ -92,9 +95,10 @@ struct Folder: View {
                                     .foregroundColor(.black)
                                     .padding(.top,20)
                                     .padding()
-                                Spacer().frame(width: 40)
+                                Spacer().frame(width: 55)
                             }
                         }
+
                     }
 
                     ZStack{
@@ -103,9 +107,10 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("使わない")
+                            .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 60)
+                                Spacer().frame(width: 70)
                                 Text("使わない")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
@@ -116,9 +121,10 @@ struct Folder: View {
                                     .foregroundColor(.black)
                                     .padding(.top,20)
                                     .padding()
-                                Spacer().frame(width: 40)
+                                Spacer().frame(width: 55)
                             }
                         }
+
 
                     }
 
@@ -129,9 +135,10 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("データ管理")
+                            .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 60)
+                                Spacer().frame(width: 70)
                                 Text("データ管理")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.white)
@@ -142,9 +149,10 @@ struct Folder: View {
                                     .foregroundColor(.white)
                                     .padding(.top,20)
                                     .padding()
-                                Spacer().frame(width: 40)
+                                Spacer().frame(width: 55)
                             }
                         }
+
 
                     }
 

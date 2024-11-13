@@ -93,7 +93,7 @@ struct Shisou1: View {
                                 .font(.custom("HannariMincho-Regular", size: 15))
                                 .padding(.bottom,30)
 
-                            Text("このように今あるアイデアを尺度を極端に変えて飛躍して考えてみます。すると思いの外斬なアイデアに繋がることがあります。")
+                            Text("このように今あるアイデアを尺度を極端に変えて飛躍して考えてみます。すると思いの外斬新なアイデアに繋がることがあります。")
                                 .frame(maxWidth:.infinity, alignment:.leading)
                                 .font(.custom("HannariMincho-Regular", size: 15))
                                 .padding(.bottom,30)

@@ -32,16 +32,11 @@ struct Gatya: View {
 
                 VStack(spacing: 0){
 
-                    Text("ワードガチャ")
-                        .font(.headline)
-                        .foregroundColor(.white) // 文字色
-                        .padding(.top,10)
-
                     Text("どんどん回してアイデアに繋げましょう。")
                         .font(.custom("HannariMincho-Regular", size: 18))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300,height: 100)
-                        .padding(.top,20)
+                        .padding(.top,70)
 
 
 

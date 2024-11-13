@@ -40,17 +40,12 @@ struct SubetenoMemo: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                 VStack{
-
-                    Text("データ管理")
-                        .font(.headline)
-                        .foregroundColor(.white) // 文字色
-                        .padding(.top,28)
-
+                    
                     Text("データの管理を行う場所です。必要が無くなったデータはスライドして削除できます。")
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300)
-                        .padding(.top,30)
+                        .padding(.top,110)
                     List{
                         ForEach(memo, id: \.self) { memo in
 

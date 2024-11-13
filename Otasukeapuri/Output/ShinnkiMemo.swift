@@ -53,7 +53,7 @@ struct ShinnkiMemo: View {
                 VStack{
                     Spacer()
                     HStack{
-
+                        Spacer()
                         Menu("ファイルを選択"){
                             Button("下書き"){
                                 state = MemoStatus.draft
@@ -69,8 +69,9 @@ struct ShinnkiMemo: View {
                             }
                         }
                         .menuStyle(.button)
-                        .foregroundColor(.black)
-                        .font(.custom("HannariMincho-Regular", size: 18))
+                        .foregroundColor(.blue)
+                        .font(.custom("HannariMincho-Regular", size: 15))
+
 
                         Spacer()
 
@@ -83,9 +84,11 @@ struct ShinnkiMemo: View {
                             Image("Save")
                                 .resizable()
                                 .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                                .frame(width: 180)
+                                .frame(width: 150)
+
                         }
                     }
+                    .padding(.top,20)
 
 
                     TextField("タイトルを入力してください", text: $inputTitle)

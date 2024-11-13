@@ -19,8 +19,8 @@ struct Nekaseru: View {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor.clear
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.clear]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
@@ -41,6 +41,7 @@ struct Nekaseru: View {
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
                         .padding(.bottom,10)
+                        .padding(.top,20)
 
                     Text("ここは思い悩んだアイデアと一旦距離を取るための場所です。一定期間時間アイデアを寝かせた後にもう一度アイデアを見た時、あなたがどのように感じるでしょうか。")
                         .font(.custom("HannariMincho-Regular", size: 15))

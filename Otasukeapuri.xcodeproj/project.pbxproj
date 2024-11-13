@@ -36,6 +36,7 @@
 		94A57F282CA2658600E750B8 /* Shisou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F272CA2658600E750B8 /* Shisou.swift */; };
 		94D522442CC3F8FB00DA38C7 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522432CC3F8FB00DA38C7 /* TabItemView.swift */; };
 		94D522462CC40CA000DA38C7 /* TabView_costom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522452CC40CA000DA38C7 /* TabView_costom.swift */; };
+		94E0197C2CE5497300C41C23 /* ContentiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0197B2CE5497300C41C23 /* ContentiPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		94A57F272CA2658600E750B8 /* Shisou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou.swift; sourceTree = "<group>"; };
 		94D522432CC3F8FB00DA38C7 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		94D522452CC40CA000DA38C7 /* TabView_costom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_costom.swift; sourceTree = "<group>"; };
+		94E0197B2CE5497300C41C23 /* ContentiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentiPad.swift; path = Otasukeapuri/ContentiPad.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				9454F0ED2CA4233E001FBD22 /* Shisou1.swift */,
 				9454F0EF2CA4235E001FBD22 /* Shisou2.swift */,
 				9454F0F12CA4236D001FBD22 /* Shisou3.swift */,
+				94E0197B2CE5497300C41C23 /* ContentiPad.swift */,
 			);
 			path = Shisou;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				948B8C162CC9085100969010 /* Seisyo.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,
 				949E87802C8C0DC500D92EA8 /* Item.swift in Sources */,
+				94E0197C2CE5497300C41C23 /* ContentiPad.swift in Sources */,
 				949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */,
 				947927DB2CB428CA0067B367 /* Nekaseru.swift in Sources */,
 				9454F0F02CA4235E001FBD22 /* Shisou2.swift in Sources */,
@@ -548,6 +552,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otasukeapuri/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "アイデアチェスト";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -557,12 +562,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akariakari.Otasukeapuri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -578,6 +587,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otasukeapuri/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "アイデアチェスト";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -587,12 +597,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akariakari.Otasukeapuri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

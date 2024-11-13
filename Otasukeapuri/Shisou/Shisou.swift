@@ -25,17 +25,12 @@ struct Shisou: View {
 
                 VStack(spacing: 0){     // V
 
-                    Text("思考方法")
-                        .font(.headline)
-                        .foregroundColor(.white) // 文字色
-                        .padding(.top,10)
-
                     Text("色んな思想方法を見ることができます。")
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300,height: 30)
 
-                        .padding(.top,50)
+                        .padding(.top,90)
                         .padding(.bottom,30)
 
 

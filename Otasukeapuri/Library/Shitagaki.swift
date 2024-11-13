@@ -22,8 +22,8 @@ struct Shitagaki: View {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = UIColor.clear
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.clear]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.clear]
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
@@ -37,14 +37,9 @@ struct Shitagaki: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
+
                 VStack{
-
-                    Text("下書き")
-                        .font(.headline)
-                        .foregroundColor(.white) // 文字色
-                        .padding(.top,28)
-
-
+                    
                     List {
                         ForEach(memo.filter { $0.state == .draft }) { memo in
                             Text(memo.title)
@@ -56,6 +51,7 @@ struct Shitagaki: View {
                         }
                     }
                     .padding(.bottom,50)
+                    .padding(.top,80)
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)

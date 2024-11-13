@@ -10,16 +10,13 @@ import SwiftUI
 struct Input: View {
 
     init() {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithOpaqueBackground()
-            appearance.backgroundColor = UIColor.clear
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            UINavigationBar.appearance().standardAppearance = appearance
-            UINavigationBar.appearance().scrollEdgeAppearance = appearance
-
-
-        }
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor.clear
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
 
     @Environment(\.dismiss) var dismiss
 
@@ -39,14 +36,16 @@ struct Input: View {
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
                         .padding(.bottom,50)
+                        .padding(.top,20)
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
-                            .frame(width: 280, height: 80)
+                            .frame(width: 300, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                        NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")
+                            .navigationBarTitleDisplayMode(.inline)) {
                             Text("ワードガチャ")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)
@@ -67,10 +66,11 @@ struct Input: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
                             .fill(.white)
-                            .frame(width: 280, height: 80)
+                            .frame(width: 300, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                        NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("思考方法")
+                            .navigationBarTitleDisplayMode(.inline)) {
                             Text("思考方法")
                                 .font(.custom("HannariMincho-Regular", size: 30))
                                 .foregroundColor(.black)

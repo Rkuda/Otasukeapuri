@@ -4,7 +4,6 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>XANO-mincho-U32.otf</string>
 		<string>HannariMincho-Regular.otf</string>
 	</array>
 </dict>
