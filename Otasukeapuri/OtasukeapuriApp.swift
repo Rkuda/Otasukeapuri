@@ -10,6 +10,7 @@ import SwiftData
 
 @main
 struct OtasukeapuriApp: App {
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Memo.self,
@@ -29,4 +30,7 @@ struct OtasukeapuriApp: App {
         }
         .modelContainer(for: Memo.self)
     }
+
+
+
 }

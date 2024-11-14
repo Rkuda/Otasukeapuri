@@ -36,7 +36,18 @@
 		94A57F282CA2658600E750B8 /* Shisou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F272CA2658600E750B8 /* Shisou.swift */; };
 		94D522442CC3F8FB00DA38C7 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522432CC3F8FB00DA38C7 /* TabItemView.swift */; };
 		94D522462CC40CA000DA38C7 /* TabView_costom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522452CC40CA000DA38C7 /* TabView_costom.swift */; };
-		94E0197C2CE5497300C41C23 /* ContentiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0197B2CE5497300C41C23 /* ContentiPad.swift */; };
+		94E0197C2CE5497300C41C23 /* ContentViewiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0197B2CE5497300C41C23 /* ContentViewiPad.swift */; };
+		94E0197E2CE55C4000C41C23 /* ContentViewiPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0197D2CE55C4000C41C23 /* ContentViewiPhone.swift */; };
+		94E019802CE55E0600C41C23 /* ShinkiMemoiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0197F2CE55E0600C41C23 /* ShinkiMemoiPad.swift */; };
+		94E019822CE55F1200C41C23 /* ShisouiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E019812CE55F1200C41C23 /* ShisouiPad.swift */; };
+		94E019842CE56A0D00C41C23 /* InputiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E019832CE56A0D00C41C23 /* InputiPad.swift */; };
+		94E019862CE56ABA00C41C23 /* GatyaiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E019852CE56ABA00C41C23 /* GatyaiPad.swift */; };
+		94E019882CE56C8E00C41C23 /* NekaseruiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E019872CE56C8E00C41C23 /* NekaseruiPad.swift */; };
+		94E0198A2CE56D5E00C41C23 /* FolderiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E019892CE56D5E00C41C23 /* FolderiPad.swift */; };
+		94E0198C2CE56EDC00C41C23 /* SubetenoMemoiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0198B2CE56EDC00C41C23 /* SubetenoMemoiPad.swift */; };
+		94E0198E2CE56F0500C41C23 /* SitagakiiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0198D2CE56F0500C41C23 /* SitagakiiPad.swift */; };
+		94E019902CE56F2700C41C23 /* SeisyoiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0198F2CE56F2700C41C23 /* SeisyoiPad.swift */; };
+		94E019922CE56F4100C41C23 /* TukawanaiiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E019912CE56F4100C41C23 /* TukawanaiiPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +97,18 @@
 		94A57F272CA2658600E750B8 /* Shisou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou.swift; sourceTree = "<group>"; };
 		94D522432CC3F8FB00DA38C7 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		94D522452CC40CA000DA38C7 /* TabView_costom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_costom.swift; sourceTree = "<group>"; };
-		94E0197B2CE5497300C41C23 /* ContentiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentiPad.swift; path = Otasukeapuri/ContentiPad.swift; sourceTree = SOURCE_ROOT; };
+		94E0197B2CE5497300C41C23 /* ContentViewiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentViewiPad.swift; path = Otasukeapuri/ContentViewiPad.swift; sourceTree = SOURCE_ROOT; };
+		94E0197D2CE55C4000C41C23 /* ContentViewiPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewiPhone.swift; sourceTree = "<group>"; };
+		94E0197F2CE55E0600C41C23 /* ShinkiMemoiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShinkiMemoiPad.swift; sourceTree = "<group>"; };
+		94E019812CE55F1200C41C23 /* ShisouiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShisouiPad.swift; sourceTree = "<group>"; };
+		94E019832CE56A0D00C41C23 /* InputiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputiPad.swift; sourceTree = "<group>"; };
+		94E019852CE56ABA00C41C23 /* GatyaiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatyaiPad.swift; sourceTree = "<group>"; };
+		94E019872CE56C8E00C41C23 /* NekaseruiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NekaseruiPad.swift; sourceTree = "<group>"; };
+		94E019892CE56D5E00C41C23 /* FolderiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderiPad.swift; sourceTree = "<group>"; };
+		94E0198B2CE56EDC00C41C23 /* SubetenoMemoiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubetenoMemoiPad.swift; sourceTree = "<group>"; };
+		94E0198D2CE56F0500C41C23 /* SitagakiiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitagakiiPad.swift; sourceTree = "<group>"; };
+		94E0198F2CE56F2700C41C23 /* SeisyoiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeisyoiPad.swift; sourceTree = "<group>"; };
+		94E019912CE56F4100C41C23 /* TukawanaiiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TukawanaiiPad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +143,7 @@
 				9454F0ED2CA4233E001FBD22 /* Shisou1.swift */,
 				9454F0EF2CA4235E001FBD22 /* Shisou2.swift */,
 				9454F0F12CA4236D001FBD22 /* Shisou3.swift */,
-				94E0197B2CE5497300C41C23 /* ContentiPad.swift */,
+				94E019812CE55F1200C41C23 /* ShisouiPad.swift */,
 			);
 			path = Shisou;
 			sourceTree = "<group>";
@@ -130,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				9454F0F32CA45101001FBD22 /* ShinnkiMemo.swift */,
+				94E0197F2CE55E0600C41C23 /* ShinkiMemoiPad.swift */,
 			);
 			path = Output;
 			sourceTree = "<group>";
@@ -138,7 +161,9 @@
 			isa = PBXGroup;
 			children = (
 				949E87A72C8C0E3600D92EA8 /* Input.swift */,
+				94E019832CE56A0D00C41C23 /* InputiPad.swift */,
 				94A57F252CA2655C00E750B8 /* Gatya.swift */,
+				94E019852CE56ABA00C41C23 /* GatyaiPad.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -156,11 +181,17 @@
 			isa = PBXGroup;
 			children = (
 				947927D82CB428B80067B367 /* Folder.swift */,
+				94E019892CE56D5E00C41C23 /* FolderiPad.swift */,
 				947927D62CB4286E0067B367 /* SubetenoMemo.swift */,
+				94E0198B2CE56EDC00C41C23 /* SubetenoMemoiPad.swift */,
 				947927DA2CB428CA0067B367 /* Nekaseru.swift */,
+				94E019872CE56C8E00C41C23 /* NekaseruiPad.swift */,
 				948B8C132CC9083A00969010 /* Shitagaki.swift */,
+				94E0198D2CE56F0500C41C23 /* SitagakiiPad.swift */,
 				948B8C152CC9085100969010 /* Seisyo.swift */,
+				94E0198F2CE56F2700C41C23 /* SeisyoiPad.swift */,
 				948B8C172CC9086600969010 /* Tukawanai.swift */,
+				94E019912CE56F4100C41C23 /* TukawanaiiPad.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -193,6 +224,8 @@
 				947927D42CAF92B70067B367 /* Output */,
 				947927D32CAF926D0067B367 /* Shisou */,
 				949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */,
+				94E0197B2CE5497300C41C23 /* ContentViewiPad.swift */,
+				94E0197D2CE55C4000C41C23 /* ContentViewiPhone.swift */,
 				949E877D2C8C0DC500D92EA8 /* ContentView.swift */,
 				94D522452CC40CA000DA38C7 /* TabView_costom.swift */,
 				94D522432CC3F8FB00DA38C7 /* TabItemView.swift */,
@@ -366,6 +399,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E019902CE56F2700C41C23 /* SeisyoiPad.swift in Sources */,
+				94E019842CE56A0D00C41C23 /* InputiPad.swift in Sources */,
 				94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */,
 				9454F0F42CA45101001FBD22 /* ShinnkiMemo.swift in Sources */,
 				94A57F282CA2658600E750B8 /* Shisou.swift in Sources */,
@@ -376,15 +411,24 @@
 				948B8C162CC9085100969010 /* Seisyo.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,
 				949E87802C8C0DC500D92EA8 /* Item.swift in Sources */,
-				94E0197C2CE5497300C41C23 /* ContentiPad.swift in Sources */,
+				94E0197C2CE5497300C41C23 /* ContentViewiPad.swift in Sources */,
+				94E019922CE56F4100C41C23 /* TukawanaiiPad.swift in Sources */,
 				949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */,
+				94E0198A2CE56D5E00C41C23 /* FolderiPad.swift in Sources */,
+				94E019822CE55F1200C41C23 /* ShisouiPad.swift in Sources */,
+				94E019862CE56ABA00C41C23 /* GatyaiPad.swift in Sources */,
 				947927DB2CB428CA0067B367 /* Nekaseru.swift in Sources */,
 				9454F0F02CA4235E001FBD22 /* Shisou2.swift in Sources */,
 				9454F0F22CA4236D001FBD22 /* Shisou3.swift in Sources */,
+				94E019882CE56C8E00C41C23 /* NekaseruiPad.swift in Sources */,
+				94E0198E2CE56F0500C41C23 /* SitagakiiPad.swift in Sources */,
+				94E0198C2CE56EDC00C41C23 /* SubetenoMemoiPad.swift in Sources */,
 				949E877C2C8C0DC500D92EA8 /* OtasukeapuriApp.swift in Sources */,
+				94E019802CE55E0600C41C23 /* ShinkiMemoiPad.swift in Sources */,
 				948B8C182CC9086600969010 /* Tukawanai.swift in Sources */,
 				947927D92CB428B80067B367 /* Folder.swift in Sources */,
 				948B8C142CC9083A00969010 /* Shitagaki.swift in Sources */,
+				94E0197E2CE55C4000C41C23 /* ContentViewiPhone.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,7 +606,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akariakari.Otasukeapuri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -571,7 +615,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -597,7 +641,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akariakari.Otasukeapuri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -606,7 +650,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
