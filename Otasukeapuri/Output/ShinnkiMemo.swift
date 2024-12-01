@@ -51,40 +51,34 @@ struct ShinnkiMemo: View {
                     .ignoresSafeArea()
                     .scaledToFill()
                     .onTapGesture {
-                                        UIApplication.shared.closeKeyboard()
-                                    }
+                        UIApplication.shared.closeKeyboard()
+                    }
 
                 VStack{
-                    Spacer()
+
+                    Text("保存先を選びアイデアを保存しましょう。")
+                        .font(.custom("HannariMincho-Regular", size: 15))
+                        .padding(.top,35)
+
                     HStack{
                         Spacer()
-                        Menu("保存先を選択"){
-                            Button("下書き"){
-                                state = MemoStatus.draft
+                            Picker(selection: $state) {
+                                ForEach(MemoStatus.allCases, id: \.self) { status in
+                                    Text(status.rawValue).tag(status)
+                                }
+                            } label: {
+                                Text(state.rawValue)
+                                    .font(.custom("HannariMincho-Regular", size: 15))
+                                    .foregroundColor(.blue)
                             }
-                            Button("清書"){
-                                state = MemoStatus.final
-                            }
-                            Button("使わない"){
-                                state = MemoStatus.unused
-                            }
-                            Button("寝かせる"){
-                                state = MemoStatus.nekaseru
-                            }
-                        }
-                        .menuStyle(.button)
-                        .foregroundColor(.blue)
-                        .font(.custom("HannariMincho-Regular", size: 15))
-
-
-                        Spacer()
+                            .pickerStyle(MenuPickerStyle()) // 必要に応じてPickerのスタイルを変更可能
 
                         Button(action: {
                             if !inputTitle.isEmpty || !inputContent.isEmpty {
                                 add()
                                 resetFields()
                             }
-                            
+
 
                             print(memo)
                         }) {
@@ -96,7 +90,7 @@ struct ShinnkiMemo: View {
                         }
 
                     }
-                    .padding(.top,20)
+
 
 
                     TextField("タイトルを入力してください", text: $inputTitle)
@@ -140,9 +134,9 @@ struct ShinnkiMemo: View {
     }
 
     private func resetFields() {
-            inputTitle = ""
-            inputContent = ""
-        }
+        inputTitle = ""
+        inputContent = ""
+    }
 
 }
 
