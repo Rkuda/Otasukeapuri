@@ -48,15 +48,16 @@ struct NekaseruiPad: View {
                         .foregroundColor(.white) // 文字色
                         .frame(width: 600,height: 100)
 
-                    List(memo.filter { $0.state == .nekaseru }) { memo in
-
-                        Text(memo.title)
-                            .font(.custom("HannariMincho-Regular", size: 25))
-                            .padding(.top,10)
-                        Text(memo.content)
-                            .font(.custom("HannariMincho-Regular", size: 18))
-                            .padding(.bottom,20)
-
+                    List {
+                        ForEach(memo.filter { $0.state == .nekaseru }) { memo in
+                            Text(memo.title)
+                                .font(.custom("HannariMincho-Regular", size: 25))
+                                .padding(.top,10)
+                            Text(memo.content)
+                                .font(.custom("HannariMincho-Regular", size: 18))
+                                .padding(.bottom,20)
+                        }
+                        .onDelete(perform: deleteMemo)
                     }
 
                 }.padding(.top,60)
@@ -76,6 +77,17 @@ struct NekaseruiPad: View {
             // もどるボタン系
         }
     }
+
+    private func deleteMemo(at offsets: IndexSet) {
+            // 削除対象のメモを特定
+            let filteredMemos = memo.filter { $0.state == .nekaseru }
+            for index in offsets {
+                let memoToDelete = filteredMemos[index]
+                context.delete(memoToDelete) // モデルコンテキストから削除
+            }
+            try? context.save() // 削除を保存
+        }
+
 }
 
 #Preview {

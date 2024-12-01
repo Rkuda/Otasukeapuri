@@ -46,6 +46,7 @@ struct Tukawanai: View {
                                 .font(.custom("HannariMincho-Regular", size: 18))
                                 .padding(.bottom,20)
                         }
+                        .onDelete(perform: deleteMemo)
                     }
                     .padding(.bottom,50)
                     .padding(.top,80)
@@ -65,6 +66,17 @@ struct Tukawanai: View {
             }
         }
     }
+
+    private func deleteMemo(at offsets: IndexSet) {
+            // 削除対象のメモを特定
+        let filteredMemos = memo.filter { $0.state == .unused }
+            for index in offsets {
+                let memoToDelete = filteredMemos[index]
+                context.delete(memoToDelete) // モデルコンテキストから削除
+            }
+            try? context.save() // 削除を保存
+        }
+
 }
 
 #Preview {

@@ -107,11 +107,11 @@ struct Folder: View {
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("使わない")
+                        NavigationLink(destination: Tukawanai().navigationBarBackButtonHidden(true).navigationTitle("使わないかも")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
                                 Spacer().frame(width: 70)
-                                Text("使わない")
+                                Text("使わないかも")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
@@ -119,34 +119,6 @@ struct Folder: View {
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .foregroundColor(.black)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 55)
-                            }
-                        }
-
-
-                    }
-
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .stroke(Color.white, lineWidth: 1)
-                            .frame(width: 330, height: 80)
-                            .padding(.top, 20)
-
-                        NavigationLink(destination: SubetenoMemo().navigationBarBackButtonHidden(true).navigationTitle("データ管理")
-                            .navigationBarTitleDisplayMode(.inline)) {
-                            HStack{
-                                Spacer().frame(width: 70)
-                                Text("データ管理")
-                                    .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.white)
-                                    .padding(.top)
-
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.white)
                                     .padding(.top,20)
                                     .padding()
                                 Spacer().frame(width: 55)

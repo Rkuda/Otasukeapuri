@@ -98,11 +98,11 @@ struct FolderiPad: View {
                             .frame(width: 660, height: 80)
                             .padding(.top, 20)
 
-                        NavigationLink(destination: TukawanaiiPad().navigationBarBackButtonHidden(true).navigationTitle("使わない")
+                        NavigationLink(destination: TukawanaiiPad().navigationBarBackButtonHidden(true).navigationTitle("使わないかも")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
                                 Spacer()
-                                Text("使わない")
+                                Text("使わないかも")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
@@ -114,28 +114,7 @@ struct FolderiPad: View {
 
                     }
 
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .fill(.black)
-                            .stroke(Color.white, lineWidth: 1)
-                            .frame(width: 660, height: 80)
-                            .padding(.top, 20)
-
-                        NavigationLink(destination: SubetenoMemoiPad().navigationBarBackButtonHidden(true).navigationTitle("データ管理")
-                            .navigationBarTitleDisplayMode(.inline)) {
-                            HStack{
-                                Spacer()
-                                Text("データ管理")
-                                    .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.white)
-                                    .padding(.top)
-
-                                Spacer()
-                            }
-                        }
-
-
-                    }
+                    
 
                     Spacer()
                 }

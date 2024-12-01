@@ -28,7 +28,7 @@ final class Memo: Identifiable, ObservableObject {
 enum MemoStatus: String, Codable, Identifiable, CaseIterable {
     case draft = "下書き"
     case final = "清書"
-    case unused = "使わない"
+    case unused = "使わないかも"
     case nekaseru = "寝かせる"
 
     var id: String { self.rawValue }

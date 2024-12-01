@@ -48,29 +48,31 @@ struct ShinkiMemoiPad: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
+                    .onTapGesture {
+                                        UIApplication.shared.closeKeyboard()
+                                    }
 
                 VStack{
+                    
                     Spacer()
 
                     HStack{
                         Spacer()
-                        Menu("ファイルを選択"){
-                            Button("下書き"){
-                                state = MemoStatus.draft
+                        Text("保存先を選びアイデアを保存しましょう。")
+                            .font(.custom("HannariMincho-Regular", size: 20))
+
+
+                        Spacer()
+                        Picker(selection: $state) {
+                            ForEach(MemoStatus.allCases, id: \.self) { status in
+                                Text(status.rawValue).tag(status)
                             }
-                            Button("清書"){
-                                state = MemoStatus.final
-                            }
-                            Button("使わない"){
-                                state = MemoStatus.unused
-                            }
-                            Button("寝かせる"){
-                                state = MemoStatus.nekaseru
-                            }
+                        } label: {
+                            Text(state.rawValue)
+                                .font(.custom("HannariMincho-Regular", size: 15))
+                                .foregroundColor(.blue)
                         }
-                        .menuStyle(.button)
-                        .foregroundColor(.blue)
-                        .font(.custom("HannariMincho-Regular", size: 15))
+                        .pickerStyle(MenuPickerStyle()) // 必要に応じてPickerのスタイルを変更可能
 
                         Spacer().frame(width: 40)
 
@@ -78,6 +80,7 @@ struct ShinkiMemoiPad: View {
                         Button(action: {
                             if !inputTitle.isEmpty || !inputContent.isEmpty {
                                 add()
+                                resetFields()
                             }
                             print(memo)
                         }) {
@@ -131,6 +134,12 @@ struct ShinkiMemoiPad: View {
 
         }
     }
+
+    private func resetFields() {
+            inputTitle = ""
+            inputContent = ""
+        }
+
 }
 
 #Preview {
