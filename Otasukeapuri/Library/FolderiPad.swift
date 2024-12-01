@@ -41,7 +41,7 @@ struct FolderiPad: View {
                         .padding(.bottom,30)
                         .padding(.top,450)
 
-                    Text("メモを残す際に選んだファイルごとにアイデアを振り返ることができます。データの削除をする際はデータ管理フォルダで行ってください。その他のフォルダは閲覧のみを行うことができます。")
+                    Text("メモを残す際に選んだファイルごとにアイデアを振り返ることができます。データの削除をする際はスライドで行えます。")
                         .font(.custom("HannariMincho-Regular", size: 20))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 600)
