@@ -77,28 +77,14 @@ struct GatyaiPad: View {
                     }
 
                     // ガチャを回すボタン
-                    Button(action: {
-                        isRolling = true
-                        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-                            // ランダムにワードを選ぶ
-                            selectedfirstWord = firstwords.randomElement() ?? ""
-                            selectedsecondword = secondwords.randomElement() ?? ""
-                            selectedthirdword = thirdwords.randomElement() ?? ""
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                            timer?.invalidate()
-                            timer = nil
-                            isRolling = false
-                        }
-                    }) {
-                        Image("lamp")
-                            .resizable()
-                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 300)
-                            .padding(.top,50)
-
-
-                    }.disabled(isRolling)
+                    Button(action: startSlotRolling) {
+                                            Image("lamp")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 300)
+                                                .padding(.top, 50)
+                                        }
+                                        .disabled(isRolling)
 
                     Spacer()
                 }
@@ -119,6 +105,40 @@ struct GatyaiPad: View {
             // もどるボタン系
         }
     }
+
+    /// スロットを同時に回して時間差で停止
+        private func startSlotRolling() {
+            isRolling = true
+
+            // 1つ目のスロットを回す
+            let firstSlotTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                selectedfirstWord = firstwords.randomElement() ?? ""
+            }
+
+            // 2つ目のスロットを回す
+            let secondSlotTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                selectedsecondword = secondwords.randomElement() ?? ""
+            }
+
+            // 3つ目のスロットを回す
+            let thirdSlotTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+                selectedthirdword = thirdwords.randomElement() ?? ""
+            }
+
+            // 各スロットの停止タイミングを設定
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // 1秒後に1つ目を停止
+                firstSlotTimer.invalidate()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // 1.5秒後に2つ目を停止
+                secondSlotTimer.invalidate()
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // 2秒後に3つ目を停止
+                thirdSlotTimer.invalidate()
+                isRolling = false // すべて停止した後にボタンを有効化
+            }
+        }
+
+
 }
 
 #Preview {
