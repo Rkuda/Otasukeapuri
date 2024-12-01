@@ -10,13 +10,14 @@ import SwiftData
 
 struct ContentView: View {
 
-        var body: some View {
-            if UIDevice.current.userInterfaceIdiom == .pad {
-                ContentViewiPad()
-                    } else {
-                        ContentViewiPhone()
-                    }
+    var body: some View {
+
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            ContentViewiPad()
+        } else {
+            ContentViewiPhone()
         }
+    }
 }
 
 
@@ -36,7 +37,7 @@ extension UINavigationController: @retroactive UIGestureRecognizerDelegate {
 #Preview  {
     ContentView()
         .modelContainer(for: Memo.self)
-    
+
 }
 
 
