@@ -30,7 +30,7 @@ struct ShisouiPad: View {
                         .foregroundColor(.white) // 文字色
                         .frame(width: 660,height: 30)
 
-                        .padding(.top,350)
+                        .padding(.top,480)
                         .padding(.bottom,30)
 
 

@@ -89,7 +89,7 @@ struct ShinkiMemoiPad: View {
                         }
                         Spacer().frame(width: 20)
                     }
-                    .padding(.top,300)
+                    .padding(.top,420)
 
 
                     TextField("タイトルを入力してください", text: $inputTitle)

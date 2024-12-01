@@ -39,7 +39,7 @@ struct FolderiPad: View {
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
                         .padding(.bottom,30)
-                        .padding(.top,320)
+                        .padding(.top,450)
 
                     Text("メモを残す際に選んだファイルごとにアイデアを振り返ることができます。データの削除をする際はデータ管理フォルダで行ってください。その他のフォルダは閲覧のみを行うことができます。")
                         .font(.custom("HannariMincho-Regular", size: 20))
@@ -57,18 +57,14 @@ struct FolderiPad: View {
                         NavigationLink(destination: SitagakiiPad().navigationBarBackButtonHidden(true).navigationTitle("下書き")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 130)
+                                Spacer()
                                 Text("下書き")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
-
                                 Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 130)
+
+
                             }
                         }
 
@@ -84,18 +80,13 @@ struct FolderiPad: View {
                         NavigationLink(destination: SeisyoiPad().navigationBarBackButtonHidden(true).navigationTitle("清書")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 130)
+                                Spacer()
                                 Text("清書")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
 
                                 Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 130)
                             }
                         }
 
@@ -110,18 +101,13 @@ struct FolderiPad: View {
                         NavigationLink(destination: TukawanaiiPad().navigationBarBackButtonHidden(true).navigationTitle("使わない")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 130)
+                                Spacer()
                                 Text("使わない")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
 
                                 Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 130)
                             }
                         }
 
@@ -138,18 +124,13 @@ struct FolderiPad: View {
                         NavigationLink(destination: SubetenoMemoiPad().navigationBarBackButtonHidden(true).navigationTitle("データ管理")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 130)
+                                Spacer()
                                 Text("データ管理")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.white)
                                     .padding(.top)
 
                                 Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.white)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 130)
                             }
                         }
 

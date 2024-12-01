@@ -17,7 +17,8 @@ struct ShinnkiMemo: View {
     @State private var inputTitle = ""
     @State private var inputContent = ""
     @State private var state: MemoStatus = MemoStatus.draft
-    
+
+
 
     private func add() {
         let data = Memo(title: inputTitle, content: inputContent, state: state)
@@ -49,12 +50,15 @@ struct ShinnkiMemo: View {
                     .resizable()
                     .ignoresSafeArea()
                     .scaledToFill()
+                    .onTapGesture {
+                                        UIApplication.shared.closeKeyboard()
+                                    }
 
                 VStack{
                     Spacer()
                     HStack{
                         Spacer()
-                        Menu("ファイルを選択"){
+                        Menu("保存先を選択"){
                             Button("下書き"){
                                 state = MemoStatus.draft
                             }
@@ -78,7 +82,10 @@ struct ShinnkiMemo: View {
                         Button(action: {
                             if !inputTitle.isEmpty || !inputContent.isEmpty {
                                 add()
+                                resetFields()
                             }
+                            
+
                             print(memo)
                         }) {
                             Image("Save")
@@ -87,6 +94,7 @@ struct ShinnkiMemo: View {
                                 .frame(width: 150)
 
                         }
+
                     }
                     .padding(.top,20)
 
@@ -130,7 +138,21 @@ struct ShinnkiMemo: View {
 
         }
     }
+
+    private func resetFields() {
+            inputTitle = ""
+            inputContent = ""
+        }
+
 }
+
+extension UIApplication {
+    func closeKeyboard() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+
 
 #Preview {
     ShinnkiMemo()

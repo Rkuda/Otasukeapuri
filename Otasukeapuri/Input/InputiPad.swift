@@ -37,7 +37,7 @@ struct InputiPad: View {
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
                         .padding(.bottom,50)
-                        .padding(.top,300)
+                        .padding(.top,400)
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
@@ -48,18 +48,13 @@ struct InputiPad: View {
                         NavigationLink(destination: GatyaiPad().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 130)
+
                                 Text("ワードガチャ")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
 
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 130)
+
                             }
                         }
 
@@ -83,18 +78,13 @@ struct InputiPad: View {
                         NavigationLink(destination: ShisouiPad().navigationBarBackButtonHidden(true).navigationTitle("思考方法")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                Spacer().frame(width: 130)
+                                
                                 Text("思考方法")
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
 
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
-                                    .padding(.top,20)
-                                    .padding()
-                                Spacer().frame(width: 130)
+
                             }
                         }
 

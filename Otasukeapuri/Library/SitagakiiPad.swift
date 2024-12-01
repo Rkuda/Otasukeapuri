@@ -50,7 +50,7 @@ struct SitagakiiPad: View {
                         }
                     }
                     .padding(.bottom,50)
-                    .padding(.top,360)
+                    .padding(.top,470)
                 }
                 // もどるボタン系
                 .navigationBarBackButtonHidden(true)

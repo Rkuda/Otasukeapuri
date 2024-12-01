@@ -37,7 +37,7 @@ struct SubetenoMemoiPad: View {
                         .font(.custom("HannariMincho-Regular", size: 20))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 600)
-                        .padding(.top,380)
+                        .padding(.top,480)
                     List{
                         ForEach(memo, id: \.self) { memo in
 

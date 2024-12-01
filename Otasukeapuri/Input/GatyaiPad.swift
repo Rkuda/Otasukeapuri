@@ -36,7 +36,7 @@ struct GatyaiPad: View {
                         .font(.custom("HannariMincho-Regular", size: 20))
                         .foregroundColor(.white) // 文字色
 
-                        .padding(.top,380)
+                        .padding(.top,480)
                         .padding(.bottom,50)
 
 

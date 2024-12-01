@@ -41,7 +41,7 @@ struct NekaseruiPad: View {
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
                         .padding(.bottom,10)
-                        .padding(.top,320)
+                        .padding(.top,450)
 
                     Text("ここは思い悩んだアイデアと一旦距離を取るための場所です。一定期間時間アイデアを寝かせた後にもう一度アイデアを見た時、あなたがどのように感じるでしょうか。")
                         .font(.custom("HannariMincho-Regular", size: 20))
