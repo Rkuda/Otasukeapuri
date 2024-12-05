@@ -41,7 +41,7 @@ struct Folder: View {
                         .padding(.bottom,30)
                         .padding(.top,20)
 
-                    Text("メモを残す際に選んだファイルごとにアイデアを振り返ることができます。データの削除をする際はスライドで行えます。")
+                    Text("メモを残す際に選んだファイルごとにアイデアを振り返ることができます。データの削除はスライドで行えます。")
                         .font(.custom("HannariMincho-Regular", size: 15))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300)
@@ -50,7 +50,8 @@ struct Folder: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
+                            .fill(Color(red: 0.21, green: 0.16, blue: 0.06))
+                            .stroke(Color.white, lineWidth: 1)
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
@@ -59,13 +60,13 @@ struct Folder: View {
                             HStack{
                                 Spacer().frame(width: 70)
                                 Text("下書き")
-                                    .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .font(.custom("HannariMincho-Regular", size: 25))
+                                    .foregroundColor(.white)
                                     .padding(.top)
 
                                 Spacer()
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top,20)
                                     .padding()
                                 Spacer().frame(width: 55)
@@ -77,8 +78,9 @@ struct Folder: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
-                            .frame(width:330, height: 80)
+                            .fill(Color(red: 0.21, green: 0.16, blue: 0.06))
+                            .stroke(Color.white, lineWidth: 1)
+                            .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
                         NavigationLink(destination: Seisyo().navigationBarBackButtonHidden(true).navigationTitle("清書")
@@ -86,13 +88,13 @@ struct Folder: View {
                             HStack{
                                 Spacer().frame(width: 70)
                                 Text("清書")
-                                    .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .font(.custom("HannariMincho-Regular", size: 25))
+                                    .foregroundColor(.white)
                                     .padding(.top)
 
                                 Spacer()
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top,20)
                                     .padding()
                                 Spacer().frame(width: 55)
@@ -103,7 +105,8 @@ struct Folder: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
+                            .fill(Color(red: 0.21, green: 0.16, blue: 0.06))
+                            .stroke(Color.white, lineWidth: 1)
                             .frame(width: 330, height: 80)
                             .padding(.top, 20)
 
@@ -112,13 +115,13 @@ struct Folder: View {
                             HStack{
                                 Spacer().frame(width: 70)
                                 Text("使わないかも")
-                                    .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .font(.custom("HannariMincho-Regular", size: 25))
+                                    .foregroundColor(.white)
                                     .padding(.top)
 
                                 Spacer()
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top,20)
                                     .padding()
                                 Spacer().frame(width: 55)

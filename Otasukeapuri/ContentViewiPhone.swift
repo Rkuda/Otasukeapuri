@@ -35,15 +35,31 @@ struct ContentViewiPhone: View {
                 Color(red: 0.7, green: 0.5, blue: 0.2)
                 // 背景色
                     .edgesIgnoringSafeArea(.all)
-                Image("背景紙ロゴあり")
-                    .resizable()
-                    .ignoresSafeArea()
-                    .scaledToFill()
+
+
+                    Image("背景紙ロゴあり")
+                        .resizable()
+                        .ignoresSafeArea()
+                        .scaledToFill()
 
                 VStack(spacing: 0){    // VStack始まり
 
+                    HStack(spacing: 0){
+
+                        Spacer()
+                        NavigationLink(destination: Tukaikata().navigationBarBackButtonHidden(true)) {
+                            Image("使い方")
+                                .resizable()
+                                .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                                .frame(width: 45)
+                                .padding(.horizontal,65)
+                                .padding(.top,25)
+                        }
+
+                    }
+
                     Text("新しいアイデアをメモしましょう。")
-                        .padding(.top,90)
+                        .padding(.top,60)
                         .padding(.bottom,10)
                         .font(.custom("HannariMincho-Regular", size: 18))
 
@@ -72,12 +88,17 @@ struct ContentViewiPhone: View {
                         }
                     }
 
-                    NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("")) {
-                        Image("Hint4")
-                            .resizable()
-                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 200)
-                    }
+
+
+                        NavigationLink(destination: Input().navigationBarBackButtonHidden(true).navigationTitle("")) {
+                            Image("Hint4")
+                                .resizable()
+                                .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                                .frame(width: 200)
+                        }
+
+
+
 
                 }    // VStack始まり
 

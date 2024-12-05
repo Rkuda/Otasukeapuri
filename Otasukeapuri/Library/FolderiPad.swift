@@ -50,7 +50,8 @@ struct FolderiPad: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
+                            .fill(Color(red: 0.21, green: 0.16, blue: 0.06))
+                            .stroke(Color.white, lineWidth: 1)
                             .frame(width: 660, height: 80)
                             .padding(.top, 20)
 
@@ -60,9 +61,16 @@ struct FolderiPad: View {
                                 Spacer()
                                 Text("下書き")
                                     .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top)
+                                    .padding(.trailing,90)
                                 Spacer()
+
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,24)
+
+                                Spacer().frame(width: 255)
 
 
                             }
@@ -73,8 +81,9 @@ struct FolderiPad: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
-                            .frame(width:660, height: 80)
+                            .fill(Color(red: 0.21, green: 0.16, blue: 0.06))
+                            .stroke(Color.white, lineWidth: 1)
+                            .frame(width: 660, height: 80)
                             .padding(.top, 20)
 
                         NavigationLink(destination: SeisyoiPad().navigationBarBackButtonHidden(true).navigationTitle("清書")
@@ -83,10 +92,17 @@ struct FolderiPad: View {
                                 Spacer()
                                 Text("清書")
                                     .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top)
+                                    .padding(.trailing,120)
 
                                 Spacer()
+
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,24)
+
+                                Spacer().frame(width: 255)
                             }
                         }
 
@@ -94,7 +110,8 @@ struct FolderiPad: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
+                            .fill(Color(red: 0.21, green: 0.16, blue: 0.06))
+                            .stroke(Color.white, lineWidth: 1)
                             .frame(width: 660, height: 80)
                             .padding(.top, 20)
 
@@ -104,10 +121,17 @@ struct FolderiPad: View {
                                 Spacer()
                                 Text("使わないかも")
                                     .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top)
 
                                 Spacer()
+
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,24)
+
+                                Spacer().frame(width: 255)
+
                             }
                         }
 
