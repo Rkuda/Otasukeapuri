@@ -34,6 +34,8 @@
 		949E87A82C8C0E3600D92EA8 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949E87A72C8C0E3600D92EA8 /* Input.swift */; };
 		94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F252CA2655C00E750B8 /* Gatya.swift */; };
 		94A57F282CA2658600E750B8 /* Shisou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A57F272CA2658600E750B8 /* Shisou.swift */; };
+		94AAB3A02D00F85200DD6645 /* Tukaikata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAB39F2D00F85200DD6645 /* Tukaikata.swift */; };
+		94AAB3A22D0103B500DD6645 /* TukaikataiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AAB3A12D0103B500DD6645 /* TukaikataiPad.swift */; };
 		94D522442CC3F8FB00DA38C7 /* TabItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522432CC3F8FB00DA38C7 /* TabItemView.swift */; };
 		94D522462CC40CA000DA38C7 /* TabView_costom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D522452CC40CA000DA38C7 /* TabView_costom.swift */; };
 		94E0197C2CE5497300C41C23 /* ContentViewiPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E0197B2CE5497300C41C23 /* ContentViewiPad.swift */; };
@@ -95,6 +97,8 @@
 		949E87A72C8C0E3600D92EA8 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		94A57F252CA2655C00E750B8 /* Gatya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gatya.swift; sourceTree = "<group>"; };
 		94A57F272CA2658600E750B8 /* Shisou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shisou.swift; sourceTree = "<group>"; };
+		94AAB39F2D00F85200DD6645 /* Tukaikata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tukaikata.swift; sourceTree = "<group>"; };
+		94AAB3A12D0103B500DD6645 /* TukaikataiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TukaikataiPad.swift; sourceTree = "<group>"; };
 		94D522432CC3F8FB00DA38C7 /* TabItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemView.swift; sourceTree = "<group>"; };
 		94D522452CC40CA000DA38C7 /* TabView_costom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView_costom.swift; sourceTree = "<group>"; };
 		94E0197B2CE5497300C41C23 /* ContentViewiPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentViewiPad.swift; path = Otasukeapuri/ContentViewiPad.swift; sourceTree = SOURCE_ROOT; };
@@ -226,6 +230,8 @@
 				949E877B2C8C0DC500D92EA8 /* OtasukeapuriApp.swift */,
 				94E0197B2CE5497300C41C23 /* ContentViewiPad.swift */,
 				94E0197D2CE55C4000C41C23 /* ContentViewiPhone.swift */,
+				94AAB39F2D00F85200DD6645 /* Tukaikata.swift */,
+				94AAB3A12D0103B500DD6645 /* TukaikataiPad.swift */,
 				949E877D2C8C0DC500D92EA8 /* ContentView.swift */,
 				94D522452CC40CA000DA38C7 /* TabView_costom.swift */,
 				94D522432CC3F8FB00DA38C7 /* TabItemView.swift */,
@@ -400,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94AAB3A02D00F85200DD6645 /* Tukaikata.swift in Sources */,
 				94E019902CE56F2700C41C23 /* SeisyoiPad.swift in Sources */,
 				94E019842CE56A0D00C41C23 /* InputiPad.swift in Sources */,
 				94A57F262CA2655C00E750B8 /* Gatya.swift in Sources */,
@@ -410,6 +417,7 @@
 				94D522462CC40CA000DA38C7 /* TabView_costom.swift in Sources */,
 				947927D72CB4286E0067B367 /* SubetenoMemo.swift in Sources */,
 				948B8C162CC9085100969010 /* Seisyo.swift in Sources */,
+				94AAB3A22D0103B500DD6645 /* TukaikataiPad.swift in Sources */,
 				9454F0EE2CA4233E001FBD22 /* Shisou1.swift in Sources */,
 				949E87802C8C0DC500D92EA8 /* Item.swift in Sources */,
 				94E0197C2CE5497300C41C23 /* ContentViewiPad.swift in Sources */,
@@ -591,7 +599,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otasukeapuri/Preview Content\"";
 				DEVELOPMENT_TEAM = P3GFDSYKJ7;
 				ENABLE_PREVIEWS = YES;
@@ -607,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akariakari.Otasukeapuri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -626,7 +634,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otasukeapuri/Preview Content\"";
 				DEVELOPMENT_TEAM = P3GFDSYKJ7;
 				ENABLE_PREVIEWS = YES;
@@ -642,7 +650,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akariakari.Otasukeapuri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

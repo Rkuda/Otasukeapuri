@@ -45,6 +45,7 @@ struct SeisyoiPad: View {
                             Text(memo.content)
                                 .font(.custom("HannariMincho-Regular", size: 18))
                                 .padding(.bottom,20)
+                            Divider()
                         }
                         .onDelete(perform: deleteMemo)
                     }

@@ -47,7 +47,7 @@ struct Input: View {
                         NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")
                             .navigationBarTitleDisplayMode(.inline)) {
                             Text("ワードガチャ")
-                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .font(.custom("HannariMincho-Regular", size: 25))
                                 .foregroundColor(.black)
                                 .frame(width: 280, height: 80)
                                 .padding(.top)
@@ -72,7 +72,7 @@ struct Input: View {
                         NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("思考方法")
                             .navigationBarTitleDisplayMode(.inline)) {
                             Text("思考方法")
-                                .font(.custom("HannariMincho-Regular", size: 30))
+                                .font(.custom("HannariMincho-Regular", size: 25))
                                 .foregroundColor(.black)
                                 .frame(width: 280, height: 80)
                                 .padding(.top)

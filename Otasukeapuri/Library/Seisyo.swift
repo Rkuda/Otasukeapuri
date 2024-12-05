@@ -44,8 +44,9 @@ struct Seisyo: View {
                                 .font(.custom("HannariMincho-Regular", size: 25))
                                 .padding(.top,10)
                             Text(memo.content)
-                                .font(.custom("HannariMincho-Regular", size: 18))
-                                .padding(.bottom,20)
+                                .font(.custom("HannariMincho-Regular", size: 16))
+                                .padding(.bottom,10)
+                            Divider()
                         }
                         .onDelete(perform: deleteMemo)
                     }

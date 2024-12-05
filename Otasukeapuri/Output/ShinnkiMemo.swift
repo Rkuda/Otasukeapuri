@@ -18,7 +18,8 @@ struct ShinnkiMemo: View {
     @State private var inputContent = ""
     @State private var state: MemoStatus = MemoStatus.draft
 
-
+    @FocusState private var isInputActive: Bool // TextEditorのフォーカス状態を管理
+    @State private var keyboardHeight: CGFloat = 0 // キーボードの高さを保持
 
     private func add() {
         let data = Memo(title: inputTitle, content: inputContent, state: state)
@@ -62,16 +63,16 @@ struct ShinnkiMemo: View {
 
                     HStack{
                         Spacer()
-                            Picker(selection: $state) {
-                                ForEach(MemoStatus.allCases, id: \.self) { status in
-                                    Text(status.rawValue).tag(status)
-                                }
-                            } label: {
-                                Text(state.rawValue)
-                                    .font(.custom("HannariMincho-Regular", size: 15))
-                                    .foregroundColor(.blue)
+                        Picker(selection: $state) {
+                            ForEach(MemoStatus.allCases, id: \.self) { status in
+                                Text(status.rawValue).tag(status)
                             }
-                            .pickerStyle(MenuPickerStyle()) // 必要に応じてPickerのスタイルを変更可能
+                        } label: {
+                            Text(state.rawValue)
+                                .font(.custom("HannariMincho-Regular", size: 15))
+                                .foregroundColor(.blue)
+                        }
+                        .pickerStyle(MenuPickerStyle()) // 必要に応じてPickerのスタイルを変更可能
 
                         Button(action: {
                             if !inputTitle.isEmpty || !inputContent.isEmpty {
@@ -101,20 +102,24 @@ struct ShinnkiMemo: View {
 
                     ZStack{
                         TextEditor(text: $inputContent)
-                            .font(.custom("HannariMincho-Regular", size: 18))
+                            .font(.custom("HannariMincho-Regular", size: 15))
+                            .focused($isInputActive) // フォーカス状態を管理
                             .frame(maxWidth:.infinity, alignment:.leading)
+                        
                             .overlay(alignment: .topLeading) {
                                 // 未入力の時、プレースホルダーを表示
                                 if inputContent.isEmpty {
                                     Text("ここに文字を入力してください。")
                                         .allowsHitTesting(false) // タップ判定を無効化
                                         .foregroundColor(Color(uiColor: .placeholderText))
-                                        .font(.custom("HannariMincho-Regular", size: 16))
+                                        .font(.custom("HannariMincho-Regular", size: 15))
                                         .padding(6)
                                 }
                             }
                     }
+                    .padding(.bottom, keyboardHeight) // キーボードの高さ分余白を追加
                     Spacer()
+
                 }
                 .padding(.all, 30)
                 .ignoresSafeArea(.keyboard)
@@ -127,9 +132,30 @@ struct ShinnkiMemo: View {
                                 dismiss()
                             }
                     }
+
+                    ToolbarItem(placement: .keyboard) { // キーボード上のツールバー
+                        Button("完了") {
+                            isInputActive = false // フォーカスを解除
+                        }
+                    }
+
                 }
             }
 
+        }
+        .onAppear {
+            // キーボードの高さを監視
+            NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
+                if let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
+                    keyboardHeight = keyboardFrame.height
+                }
+            }
+            NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { _ in
+                keyboardHeight = 0
+            }
+        }
+        .onDisappear {
+            NotificationCenter.default.removeObserver(self) // 監視解除
         }
     }
 

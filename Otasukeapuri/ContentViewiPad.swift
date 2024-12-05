@@ -79,6 +79,17 @@ struct ContentViewiPad: View {
                         }
                     }
 
+                    NavigationLink(destination: TukaikataiPad().navigationBarBackButtonHidden(true)) {
+                        Image("使い方")
+                            .resizable()
+                            .scaledToFit()      // 縦横比を維持しながらフレームに収める
+                            .frame(width: 60)
+                            .padding(.horizontal,65)
+                            .padding(.top,35)
+
+
+                }
+
                     Spacer().frame(height: 50)
 
                 }    // VStack始まり
