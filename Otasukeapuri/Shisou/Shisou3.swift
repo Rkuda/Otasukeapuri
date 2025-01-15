@@ -12,7 +12,7 @@ struct Shisou3: View {
 
     var body: some View {
         ZStack {
-            Color(.white)
+            Color(red: 0.91, green: 0.9, blue: 0.92)
                 .edgesIgnoringSafeArea(.all)
             VStack{
 

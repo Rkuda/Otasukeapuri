@@ -45,7 +45,9 @@ struct Tukawanai: View {
                             Text(memo.content)
                                 .font(.custom("HannariMincho-Regular", size: 16))
                                 .padding(.bottom,10)
+                                .lineSpacing(5)
                             Divider()
+                                .background(Color.gray)
                         }
                         .onDelete(perform: deleteMemo)
                     }

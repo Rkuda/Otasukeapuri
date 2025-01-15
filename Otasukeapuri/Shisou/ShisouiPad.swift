@@ -39,7 +39,7 @@ struct ShisouiPad: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
+                                .fill(Color(red: 0.9, green: 0.87, blue: 0.9))
                                 .frame(width: 660, height: 80)
                                 .padding(.top, 20)
                             HStack{
@@ -60,7 +60,7 @@ struct ShisouiPad: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
+                                .fill(Color(red: 0.9, green: 0.87, blue: 0.9))
                                 .frame(width: 660, height: 80)
                                 .padding(.top, 20)
                             HStack{
@@ -83,7 +83,7 @@ struct ShisouiPad: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
+                                .fill(Color(red: 0.9, green: 0.87, blue: 0.9))
                                 .frame(width: 660, height: 80)
                                 .padding(.top, 20)
                             HStack{

@@ -36,7 +36,7 @@ struct Tukaikata: View {
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
                             .frame(width: 130)
                             .padding(.bottom,10)
-                            .padding(.top,40)
+                            .padding(.top,70)
 
 
                         ScrollView{

@@ -36,7 +36,7 @@ struct Gatya: View {
                         .font(.custom("HannariMincho-Regular", size: 18))
                         .foregroundColor(.white) // 文字色
                         .frame(width: 300,height: 100)
-                        .padding(.top,70)
+                        .padding(.top,50)
 
 
 
@@ -44,7 +44,7 @@ struct Gatya: View {
                         Image("煙単体2")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 370)
+                            .frame(width: 350)
                             .padding(.top,10)
                         Text(selectedfirstWord)
                             .font(.custom("HannariMincho-Regular", size: 30))
@@ -58,7 +58,7 @@ struct Gatya: View {
                         Image("煙単体2")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 370)
+                            .frame(width: 350)
                             .padding(.top,10)
                         Text(selectedsecondword)
                             .font(.custom("HannariMincho-Regular", size: 30))
@@ -70,7 +70,7 @@ struct Gatya: View {
                         Image("煙単体2")
                             .resizable()
                             .scaledToFit()      // 縦横比を維持しながらフレームに収める
-                            .frame(width: 370)
+                            .frame(width: 350)
                             .padding(.top,10)
                         Text(selectedthirdword)
                             .font(.custom("HannariMincho-Regular", size: 30))

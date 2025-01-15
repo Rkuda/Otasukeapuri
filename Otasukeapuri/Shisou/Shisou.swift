@@ -39,7 +39,7 @@ struct Shisou: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
+                                .fill(Color(red: 0.9, green: 0.87, blue: 0.9))
                                 .frame(width: 330, height: 80)
                                 .padding(.top, 20)
                             HStack{
@@ -47,12 +47,14 @@ struct Shisou: View {
                                     .font(.custom("HannariMincho-Regular", size: 30))
                                     .foregroundColor(.black)
                                     .padding(.top)
+
                             }
                         }
                         .padding(.bottom,30)
                     }
                     .sheet(isPresented: $modalFlg1) {
                         Shisou1()
+                            
                     }
 
                     Button {
@@ -60,7 +62,7 @@ struct Shisou: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
+                                .fill(Color(red: 0.9, green: 0.87, blue: 0.9))
                                 .frame(width: 330, height: 80)
                                 .padding(.top, 20)
                             HStack{
@@ -83,7 +85,7 @@ struct Shisou: View {
                     } label: {
                         ZStack{
                             RoundedRectangle(cornerRadius: 20)
-                                .fill(.white)
+                                .fill(Color(red: 0.9, green: 0.87, blue: 0.9))
                                 .frame(width: 330, height: 80)
                                 .padding(.top, 20)
                             HStack{

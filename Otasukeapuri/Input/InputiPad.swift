@@ -41,19 +41,28 @@ struct InputiPad: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
+                            .fill(Color(red: 0.16, green: 0.16, blue: 0.31))
+                            .stroke(Color.white, lineWidth: 1)
                             .frame(width: 660, height: 80)
                             .padding(.top, 20)
+
+
 
                         NavigationLink(destination: GatyaiPad().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-
+                                Spacer()
                                 Text("ワードガチャ")
                                     .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top)
+                                Spacer()
 
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,24)
+
+                                Spacer().frame(width: 255)
 
                             }
                         }
@@ -71,19 +80,27 @@ struct InputiPad: View {
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
+                            .fill(Color(red: 0.16, green: 0.16, blue: 0.31))
+                            .stroke(Color.white, lineWidth: 1)
                             .frame(width: 660, height: 80)
                             .padding(.top, 20)
 
                         NavigationLink(destination: ShisouiPad().navigationBarBackButtonHidden(true).navigationTitle("思考方法")
                             .navigationBarTitleDisplayMode(.inline)) {
                             HStack{
-                                
+                                Spacer()
                                 Text("思考方法")
                                     .font(.custom("HannariMincho-Regular", size: 30))
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .padding(.top)
+                                    .padding(.trailing,60)
+                                Spacer()
 
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,24)
+
+                                Spacer().frame(width: 255)
 
                             }
                         }

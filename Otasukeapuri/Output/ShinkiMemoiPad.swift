@@ -113,6 +113,7 @@ struct ShinkiMemoiPad: View {
                                         .foregroundColor(Color(uiColor: .placeholderText))
                                         .font(.custom("HannariMincho-Regular", size: 16))
                                         .padding(6)
+                                        .lineSpacing(5)
                                 }
                             }
                     }

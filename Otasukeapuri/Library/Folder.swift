@@ -63,6 +63,7 @@ struct Folder: View {
                                     .font(.custom("HannariMincho-Regular", size: 25))
                                     .foregroundColor(.white)
                                     .padding(.top)
+                                    .padding(.leading,15)
 
                                 Spacer()
                                 Image(systemName: "chevron.right")
@@ -91,6 +92,7 @@ struct Folder: View {
                                     .font(.custom("HannariMincho-Regular", size: 25))
                                     .foregroundColor(.white)
                                     .padding(.top)
+                                    .padding(.leading,15)
 
                                 Spacer()
                                 Image(systemName: "chevron.right")
@@ -118,6 +120,7 @@ struct Folder: View {
                                     .font(.custom("HannariMincho-Regular", size: 25))
                                     .foregroundColor(.white)
                                     .padding(.top)
+                                    .padding(.leading,15)
 
                                 Spacer()
                                 Image(systemName: "chevron.right")

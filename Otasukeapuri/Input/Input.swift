@@ -35,22 +35,35 @@ struct Input: View {
                         .resizable()
                         .scaledToFit()      // 縦横比を維持しながらフレームに収める
                         .frame(width: 150)
-                        .padding(.bottom,50)
-                        .padding(.top,20)
+                        .padding(.bottom,40)
+                        .padding(.top,10)
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
-                            .frame(width: 300, height: 80)
+                            .fill(Color(red: 0.16, green: 0.16, blue: 0.31))
+                            .stroke(Color.white, lineWidth: 1)
+                            .frame(width: 320, height: 80)
                             .padding(.top, 20)
 
                         NavigationLink(destination: Gatya().navigationBarBackButtonHidden(true).navigationTitle("ワードガチャ")
                             .navigationBarTitleDisplayMode(.inline)) {
-                            Text("ワードガチャ")
+
+
+                                Text("ワードガチャ")
                                 .font(.custom("HannariMincho-Regular", size: 25))
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                                 .frame(width: 280, height: 80)
                                 .padding(.top)
+                                .padding(.leading,35)
+                                .padding(.leading,5)
+
+
+                                Spacer().frame(width: 5)
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,20)
+                                    .padding()
+                                Spacer().frame(width: 55)
                         }
 
                     }
@@ -61,21 +74,30 @@ struct Input: View {
                         .lineSpacing(12)
                         .foregroundColor(.white) // 文字色
                         .frame(width: 250,height: 130)
-                        .padding(.bottom,50)
+                        .padding(.bottom,30)
 
                     ZStack{
                         RoundedRectangle(cornerRadius: 20)
-                            .fill(.white)
-                            .frame(width: 300, height: 80)
+                            .fill(Color(red: 0.16, green: 0.16, blue: 0.31))
+                            .stroke(Color.white, lineWidth: 1)
+                            .frame(width: 320, height: 80)
                             .padding(.top, 20)
 
                         NavigationLink(destination: Shisou().navigationBarBackButtonHidden(true).navigationTitle("思考方法")
                             .navigationBarTitleDisplayMode(.inline)) {
                             Text("思考方法")
                                 .font(.custom("HannariMincho-Regular", size: 25))
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                                 .frame(width: 280, height: 80)
                                 .padding(.top)
+                                .padding(.leading,15)
+
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .foregroundColor(.white)
+                                    .padding(.top,20)
+                                    .padding()
+                                Spacer().frame(width: 55)
                         }
 
                     }
@@ -93,7 +115,7 @@ struct Input: View {
 
 
 
-                }.padding(.top,30)
+                }
 
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {

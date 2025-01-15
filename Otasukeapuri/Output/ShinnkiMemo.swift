@@ -114,6 +114,7 @@ struct ShinnkiMemo: View {
                                         .foregroundColor(Color(uiColor: .placeholderText))
                                         .font(.custom("HannariMincho-Regular", size: 15))
                                         .padding(6)
+                                        .lineSpacing(5)
                                 }
                             }
                     }

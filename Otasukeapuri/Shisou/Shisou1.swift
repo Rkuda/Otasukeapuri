@@ -14,7 +14,7 @@ struct Shisou1: View {
     var body: some View {
 
         ZStack {
-            Color(.white)
+            Color(red: 0.91, green: 0.9, blue: 0.92)
                 .edgesIgnoringSafeArea(.all)
 
             VStack{
@@ -104,6 +104,7 @@ struct Shisou1: View {
                         }
                     }   //文字の周り余白のため
                     .padding(.all, 30)
+                    
                 }
             }
         }
